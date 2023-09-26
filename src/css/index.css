@@ -1,4 +1,8 @@
 html,
 body {
-	@apply font-montserrat bg-black;
+	@apply font-montserrat bg-slate-900 text-dorado;
+}
+
+.menuText {
+	@apply text-xs md:text-base;
 }
