@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				dorado: '#D5B183',
+				crema: '#E1D7CB',
 				naranja: '#A65D4F',
 			},
 			fontFamily: {
