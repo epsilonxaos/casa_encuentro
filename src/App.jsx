@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Bienvenida from './components/sections/Bienvenida'
 import Amenidades from './components/sections/Amenidades'
+import Habitaciones from './components/sections/Habitaciones'
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 				<Banner />
 				<Bienvenida />
 				<Amenidades />
+				<Habitaciones />
 			</main>
 			<Footer />
 		</>
