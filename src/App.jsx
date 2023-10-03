@@ -6,6 +6,7 @@ import Amenidades from './components/sections/Amenidades'
 import Habitaciones from './components/sections/Habitaciones'
 import Experiencias from './components/sections/Experiencias'
 import Ubicacion from './components/sections/Ubicacion'
+import Voluntariado from './components/sections/Voluntariado'
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Habitaciones />
 				<Experiencias />
 				<Ubicacion />
+				<Voluntariado />
 			</main>
 			<Footer />
 		</>
