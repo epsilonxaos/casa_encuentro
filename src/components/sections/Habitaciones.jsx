@@ -26,35 +26,34 @@ export default function Habitaciones() {
 				/>
 			</Container>
 
-<div className="overflow-hidden">
-
-			<Container className='max-w-[1320px] px-0'>
-				<UIRoom
-					img={habComp}
-					title='Habitaciones Compartidas'
-					description='Cama en habitación compartida mixta de 6 camas'
-					sizeRoom='Tamaño: 25 M2'
-					amenidades={['Aire acondicionado', 'Baño privado', 'Ropa de Cama', 'Mosquitero', 'Ventilador']}
-				/>
-				<UIRoom
-					img={habPriv}
-					title='Habitaciones privadas dobles'
-					description='2 Habitaciones privadas para cuatro personas con aire acondicionado'
-					sizeRoom='Tamaño Primera habitación 8 M2 <br /> Tamaño Segunda habitación 10 M2'
-					amenidades={[
-						'TV',
-						'Escritorio más clósets',
-						'Aire acondicionado',
-						'Baño privado',
-						'Ropa de Cama',
-						'Mosquitero',
-						'Ventilador',
-						'Perchero para ropa',
-					]}
-					type='reverse'
-				/>
-			</Container>
-</div>
+			<div className='overflow-hidden'>
+				<Container className='max-w-[1320px] px-0'>
+					<UIRoom
+						img={habComp}
+						title='Habitaciones Compartidas'
+						description='Cama en habitación compartida mixta de 6 camas'
+						sizeRoom='Tamaño: 25 M2'
+						amenidades={['Aire acondicionado', 'Baño privado', 'Ropa de Cama', 'Mosquitero', 'Ventilador']}
+					/>
+					<UIRoom
+						img={habPriv}
+						title='Habitaciones privadas dobles'
+						description='2 Habitaciones privadas para cuatro personas con aire acondicionado'
+						sizeRoom='Tamaño Primera habitación 8 M2 <br /> Tamaño Segunda habitación 10 M2'
+						amenidades={[
+							'TV',
+							'Escritorio más clósets',
+							'Aire acondicionado',
+							'Baño privado',
+							'Ropa de Cama',
+							'Mosquitero',
+							'Ventilador',
+							'Perchero para ropa',
+						]}
+						type='reverse'
+					/>
+				</Container>
+			</div>
 
 			<DecoracionHorizontal
 				className='w-full overflow-hidden'
@@ -67,7 +66,9 @@ export default function Habitaciones() {
 function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'normal' }) {
 	return (
 		<div
-			className={`flex flex-wrap items-center mb-[60px] md:mb-[80px] lg:mb-[100px] ${type === 'reverse' && 'flex-row-reverse'}`}>
+			className={`flex flex-wrap items-center mb-[60px] md:mb-[80px] lg:mb-[100px] ${
+				type === 'reverse' && 'flex-row-reverse'
+			}`}>
 			<div className={`w-full md:w-[45%] pl-10 pr-4 mb-7 md:mb-0`}>
 				<h3 className='text-left font-juliusSansOne text-base md:text-xl lg:text-2xl xl:text-3xl'>{title}</h3>
 				<Parrafo className='font-medium mb-0'>{description}</Parrafo>
