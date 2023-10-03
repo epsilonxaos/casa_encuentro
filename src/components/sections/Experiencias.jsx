@@ -25,7 +25,7 @@ const ExperienciaUI = ({data = []}) => {
         <>
         {
             data.map((d, k) => 
-                <article className={`${k%2 == 0 ? 'bg-[#090909]' : ''} py-[15px] px-[15px] md:px-[25px] lg:px-[50px] mb-[40px]`} key={"galeria-"+ID+"-"+k}>
+                <article className={`${k%2 == 0 ? 'bg-[#090909]' : ''} py-[15px] px-[15px] max-w-[1260px] mx-auto md:px-[25px] lg:px-[50px] mb-[40px]`} key={"galeria-"+ID+"-"+k}>
                     <img src={d.icon} alt="Icono " className="w-[99px] mx-auto mb-5" />
                     <Titulo className="mb-0">{d.title}</Titulo>
                     <Parrafo className="text-center">{d.description}</Parrafo>
