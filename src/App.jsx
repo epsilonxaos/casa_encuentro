@@ -5,6 +5,7 @@ import Bienvenida from './components/sections/Bienvenida'
 import Amenidades from './components/sections/Amenidades'
 import Habitaciones from './components/sections/Habitaciones'
 import Experiencias from './components/sections/Experiencias'
+import Ubicacion from './components/sections/Ubicacion'
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Amenidades />
 				<Habitaciones />
 				<Experiencias />
+				<Ubicacion />
 			</main>
 			<Footer />
 		</>
