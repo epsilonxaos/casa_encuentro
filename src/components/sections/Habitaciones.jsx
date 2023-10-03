@@ -3,7 +3,7 @@ import { generarId } from '../helpers/helpers'
 import Titulo from '../helpers/Titulo'
 import Parrafo from '../helpers/Parrafo'
 import Container from '../container/Container'
-import icono from '../../img/habitaciones/icono.png'
+import icono from '../../img/habitaciones/icono-1.svg'
 import DecoracionHorizontal from '../helpers/DecoracionHorizontal'
 
 import habComp from '../../img/habitaciones/hab-comp.jpg'
@@ -68,7 +68,7 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 	return (
 		<div
 			className={`flex flex-wrap items-center mb-[60px] md:mb-[80px] lg:mb-[100px] ${type === 'reverse' && 'flex-row-reverse'}`}>
-			<div className={`w-full md:w-[45%] pl-10 pr-4 mb-7`}>
+			<div className={`w-full md:w-[45%] pl-10 pr-4 mb-7 md:mb-0`}>
 				<h3 className='text-left font-juliusSansOne text-base md:text-xl lg:text-2xl xl:text-3xl'>{title}</h3>
 				<Parrafo className='font-medium mb-0'>{description}</Parrafo>
 				<Parrafo className='mb-[15px]'>{parse(sizeRoom)}</Parrafo>
