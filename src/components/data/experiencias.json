@@ -1,0 +1,42 @@
+[
+    {
+        "icon": "img/experiencias/ecoturisticas.svg",
+        "title": "Experiencias ecoturísticas",
+        "description": "Disfruta de cerca la magia de las zonas arqueológicas y pueblos mágicos de Yucatán, ideales para los amantes de los recorridos al aire libre.",
+        "gallery": [
+            "img/experiencias/eco/01.png",
+            "img/experiencias/eco/02.png",
+            "img/experiencias/eco/03.png",
+            "img/experiencias/eco/04.png",
+            "img/experiencias/eco/05.png"
+        ]
+    },
+    {
+        "icon":"img/experiencias/gastronomicas.svg",
+        "title":"Experiencias gastronómicas",
+        "description": "Vive la cultura de Yucatán a través de su deliciosa gastronomía formando parte de los procesos que la vuelen única.",
+        "gallery": [
+            "img/experiencias/gas/01.png",
+            "img/experiencias/gas/02.png"
+        ]
+    },
+    {
+        "icon":"img/experiencias/acuaticas.svg",
+        "title":"Experiencias acuáticas",
+        "description": "Haz una inmersión hacia un mundo de experiencias en las aguas cristalinas de Yucatán.",
+        "gallery": [
+            "img/experiencias/acu/01.png",
+            "img/experiencias/acu/02.png",
+            "img/experiencias/acu/03.png"
+        ]
+    },
+    {
+        "icon":"img/experiencias/terapeuticas.svg",
+        "title":"Experiencias terapéuticas",
+        "description": "Consiente al cuerpo y al espíritu con nuestras experiencias que te permitirán reconectar contigo mismo.",
+        "gallery": [
+            "img/experiencias/ter/01.png",
+            "img/experiencias/ter/02.png"
+        ]
+    }
+]

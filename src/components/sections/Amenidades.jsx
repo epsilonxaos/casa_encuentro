@@ -3,7 +3,7 @@ import Titulo from '../helpers/Titulo'
 import Parrafo from '../helpers/Parrafo'
 import amenidades from '../data/amenidades.json'
 import DecoracionHorizontal from '../helpers/DecoracionHorizontal'
-console.log(amenidades)
+
 export default function Amenidades() {
 	return (
 		<>
