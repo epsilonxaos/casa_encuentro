@@ -3,7 +3,7 @@ import Titulo from '../helpers/Titulo'
 import Parrafo from '../helpers/Parrafo'
 import amenidades from '../data/amenidades.json'
 import DecoracionHorizontal from '../helpers/DecoracionHorizontal'
-
+console.log(amenidades)
 export default function Amenidades() {
 	return (
 		<>
@@ -12,7 +12,7 @@ export default function Amenidades() {
 					Espacios diseñados pensando en tu <br />
 					comodidad y tus necesidades
 				</Titulo>
-				<hr className=' border-crema w-full max-w-[215px] mx-auto mb-[40px]' />
+				<hr className='border-crema w-full max-w-[215px] mx-auto mb-[40px]' />
 
 				<div className='flex flex-wrap justify-center'>
 					{amenidades.map(k => (
