@@ -10,6 +10,7 @@ import { twMerge } from 'tailwind-merge'
 import { DateTime } from 'luxon'
 import { FaTimes } from 'react-icons/fa'
 import { BsCalendarWeek } from 'react-icons/bs'
+import { useTranslation } from 'react-i18next'
 
 export default function Header() {
 	const [open, setOpen] = useState(false)
@@ -50,11 +51,26 @@ export default function Header() {
 	)
 }
 
-function Language() {
-	return <>ES EN</>
+const Language = () => {
+	const { i18n } = useTranslation()
+
+	return (
+		<>
+			<span
+				onClick={() => i18n.changeLanguage('es')}
+				className={`mr-2 ${i18n.language == 'es' ? 'underline font-semibold' : 'opacity-60'}`}>
+				ES
+			</span>
+			<span
+				onClick={() => i18n.changeLanguage('en')}
+				className={i18n.language == 'en' ? 'underline font-semibold' : 'opacity-60'}>
+				EN
+			</span>
+		</>
+	)
 }
 
-function Menu({ className = '' }) {
+const Menu = ({ className = '' }) => {
 	return (
 		<ul className={className}>
 			<li>Hostal</li>
@@ -74,17 +90,14 @@ const FormReservaciones = () => {
 	const [checkOut, setCheckOut] = useState(false)
 	const [open, setOpen] = useState(false)
 
+	const { t } = useTranslation()
+
 	useEffect(() => {
 		const currentTime = obtenerFecha()
 		setCurrentDate(currentTime.dateCurrent)
 		setCheckIn({ date: currentTime.dateCurrent, dateFormat: currentTime.dateCurrentFormat })
 		setCheckOut({ date: currentTime.dateCurrent2, dateFormat: currentTime.dateCurrentFormat2 })
 	}, [])
-
-	useEffect(() => {
-		console.log('%c >>> checkIn ', 'background: #03071e; color: #ffba08; font-weight: bold')
-		console.log(checkIn)
-	}, [checkIn])
 
 	if (!checkIn && !checkOut) return
 
@@ -133,7 +146,7 @@ const FormReservaciones = () => {
 							<button
 								className='bg-naranja py-2 px-2 text-white font-medium text-sm'
 								type='submit'>
-								Reservar ahora
+								{t('header.reservar_ahora')}
 							</button>
 						</div>
 					</form>
@@ -147,7 +160,7 @@ const FormReservaciones = () => {
 				} text-white py-1 px-2 rounded-b text-sm`}>
 				{!open ? (
 					<>
-						<BsCalendarWeek className='inline mr-1' /> Reservar ahora
+						<BsCalendarWeek className='inline mr-1' /> {t('header.reservar_ahora')}
 					</>
 				) : (
 					<>

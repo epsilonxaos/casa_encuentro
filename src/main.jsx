@@ -1,7 +1,10 @@
+//* General
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-//* Import styles
+//* i18n
+import './lang/i18n'
+//* Styles
 import './fonts/fonts.css'
 import './css/tailwind.css'
 import './css/index.css'
