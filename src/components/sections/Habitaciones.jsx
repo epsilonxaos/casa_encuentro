@@ -10,6 +10,10 @@ import habComp from '../../img/habitaciones/hab-comp.jpg'
 import habPriv from '../../img/habitaciones/hab-priv.jpg'
 import adorno1 from '../../img/habitaciones/adorno1.png'
 import adorno2 from '../../img/habitaciones/adorno2.png'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/autoplay'
 
 export default function Habitaciones() {
 	return (
@@ -95,11 +99,46 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 					/>
 				)}
 
-				<img
-					src={img}
-					alt=''
-					className='h-[230px] md:h-[330px] object-cover w-full'
-				/>
+				<Swiper
+					spaceBetween={0}
+					slidesPerView={1}
+					modules={[Autoplay]}
+					autoplay={{
+						delay: 4000,
+					}}
+					speed={1500}
+					loop={true}
+					onSlideChange={() => console.log('slide change')}
+					onSwiper={swiper => console.log(swiper)}>
+					<SwiperSlide>
+						<img
+							src={img}
+							alt=''
+							className='h-[230px] md:h-[330px] object-cover w-full'
+						/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img
+							src={img}
+							alt=''
+							className='h-[230px] md:h-[330px] object-cover w-full'
+						/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img
+							src={img}
+							alt=''
+							className='h-[230px] md:h-[330px] object-cover w-full'
+						/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img
+							src={img}
+							alt=''
+							className='h-[230px] md:h-[330px] object-cover w-full'
+						/>
+					</SwiperSlide>
+				</Swiper>
 			</div>
 		</div>
 	)
