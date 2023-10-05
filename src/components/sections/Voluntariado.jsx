@@ -21,7 +21,7 @@ export default function Voluntariado() {
 						/>
 					</div>
 					<div className='w-full md:w-3/5'>
-						<Titulo className='mb-[20px]'>Haz de tu estadía una experiencia enriquecedora y gratificante.</Titulo>
+						<Titulo.H2 className='mb-[20px]'>Haz de tu estadía una experiencia enriquecedora y gratificante.</Titulo.H2>
 						<hr className='border-crema w-[60%] max-w-[215px] mx-auto mb-[20px]' />
 						<Parrafo className='font-semibold'>
 							Nos llena de alegría y emoción darte la más cordial bienvenida a Casa Encuentro.

@@ -7,6 +7,7 @@ import Habitaciones from './components/sections/Habitaciones'
 import Experiencias from './components/sections/Experiencias'
 import Ubicacion from './components/sections/Ubicacion'
 import Voluntariado from './components/sections/Voluntariado'
+import Reviews from './components/sections/Reviews'
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Amenidades />
 				<Habitaciones />
 				<Experiencias />
+				<Reviews />
 				<Ubicacion />
 				<Voluntariado />
 			</main>

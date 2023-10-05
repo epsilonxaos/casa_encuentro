@@ -14,16 +14,18 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/autoplay'
+import Botton from '../helpers/Botton'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Habitaciones() {
 	return (
 		<>
 			<Container className='px-[50px] md:px-[80px] lg:px-[120px] pt-[90px] overflow-hidden relative max-w-[1320px]'>
-				<Titulo className='mb-[15px]'>
+				<Titulo.H2 className='mb-[15px]'>
 					Hospédate con nosotros y <br />
 					siéntete en casa
-				</Titulo>
-				<img
+				</Titulo.H2>
+				<LazyLoadImage
 					src={icono}
 					alt='Icono habitaciones'
 					className='mb-[50px] lg:mb-[90px] w-[90px] mx-auto'
@@ -84,7 +86,7 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 					))}
 				</ul>
 
-				<button className='bg-naranja py-2 px-7 text-white font-medium text-sm'>Reservar</button>
+				<Botton.Reservar />
 			</div>
 			<div className={`w-full md:w-[50%] relative z-[1]`}>
 				{type === 'reverse' ? (
@@ -107,32 +109,30 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 						delay: 4000,
 					}}
 					speed={1500}
-					loop={true}
-					onSlideChange={() => console.log('slide change')}
-					onSwiper={swiper => console.log(swiper)}>
+					loop={true}>
 					<SwiperSlide>
-						<img
+						<LazyLoadImage
 							src={img}
 							alt=''
 							className='h-[230px] md:h-[330px] object-cover w-full'
 						/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img
+						<LazyLoadImage
 							src={img}
 							alt=''
 							className='h-[230px] md:h-[330px] object-cover w-full'
 						/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img
+						<LazyLoadImage
 							src={img}
 							alt=''
 							className='h-[230px] md:h-[330px] object-cover w-full'
 						/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img
+						<LazyLoadImage
 							src={img}
 							alt=''
 							className='h-[230px] md:h-[330px] object-cover w-full'
