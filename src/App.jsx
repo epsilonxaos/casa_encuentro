@@ -8,8 +8,14 @@ import Experiencias from './components/sections/Experiencias'
 import Ubicacion from './components/sections/Ubicacion'
 import Voluntariado from './components/sections/Voluntariado'
 import Reviews from './components/sections/Reviews'
+import Entrada from './components/Entrada'
+import { useState } from 'react'
 
 function App() {
+	const [into, setInto] = useState(false)
+
+	if (!into) return <Entrada onClick={() => setInto(true)} />
+
 	return (
 		<>
 			<Header />
