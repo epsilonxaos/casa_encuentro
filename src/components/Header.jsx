@@ -58,12 +58,12 @@ const Language = () => {
 		<>
 			<span
 				onClick={() => i18n.changeLanguage('es')}
-				className={`mr-2 ${i18n.language == 'es' ? 'underline font-semibold' : 'opacity-60'}`}>
+				className={`mr-2 cursor-pointer ${i18n.language == 'es' ? 'underline font-semibold' : 'opacity-60'}`}>
 				ES
 			</span>
 			<span
 				onClick={() => i18n.changeLanguage('en')}
-				className={i18n.language == 'en' ? 'underline font-semibold' : 'opacity-60'}>
+				className={`cursor-pointer ${i18n.language == 'en' ? 'underline font-semibold' : 'opacity-60'}`}>
 				EN
 			</span>
 		</>

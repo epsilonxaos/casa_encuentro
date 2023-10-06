@@ -412,3 +412,77 @@ export const HostelWorld = ({ className }) => {
 		</svg>
 	)
 }
+
+export const DecoracionExp = ({ className = 'w-[75px]' }) => {
+	return (
+		<svg
+			{...(className && { className })}
+			width='75'
+			height='531'
+			viewBox='0 0 75 531'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'>
+			<g clip-path='url(#clip0_88_1433)'>
+				<path
+					d='M0.052124 0.651367H74.06V530.349H0.052124'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M0.651123 0.0649414V530.349'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M1.57581 331.479H72.2109'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M0.651123 70.3486H74.06'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M0.651123 137.259H73.1354'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M36.8933 283.152V138.184'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M20.1721 1.57568V71.2731'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M38.7555 1.57568V71.2731'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M55.4767 1.57568V71.2731'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+				<path
+					d='M37.0335 281.877L19.9519 298.958L37.0335 316.04L54.1152 298.958L37.0335 281.877Z'
+					stroke='#D5B183'
+					stroke-miterlimit='10'
+				/>
+			</g>
+			<defs>
+				<clipPath id='clip0_88_1433'>
+					<rect
+						width='74.7111'
+						height='531'
+						fill='white'
+					/>
+				</clipPath>
+			</defs>
+		</svg>
+	)
+}
