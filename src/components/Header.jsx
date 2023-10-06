@@ -156,7 +156,7 @@ const FormReservaciones = () => {
 			<button
 				onClick={() => setOpen(!open)}
 				className={`absolute flex items-center -z-[1] -bottom-[27px] left-1/2 -translate-x-1/2 ${
-					!open ? 'bg-naranja' : 'bg-red-900'
+					!open ? 'bg-naranja' : 'bg-slate-900'
 				} text-white py-1 px-2 rounded-b text-sm`}>
 				{!open ? (
 					<>
