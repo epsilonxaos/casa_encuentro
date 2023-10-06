@@ -1,58 +1,58 @@
 [
 	{
 		"img": "img/amenidades/01.svg",
-		"title": "Ropa de cama incluida"
+		"title": { "es": "Ropa de cama incluida", "en": "" }
 	},
 	{
 		"img": "img/amenidades/02.svg",
-		"title": "Wifi"
+		"title": { "es": "Wifi", "en": "" }
 	},
 	{
 		"img": "img/amenidades/05.svg",
-		"title": "Gym"
+		"title": { "es": "Gym", "en": "" }
 	},
 	{
 		"img": "img/amenidades/04.svg",
-		"title": "Piscina"
+		"title": { "es": "Piscina", "en": "" }
 	},
 	{
 		"img": "img/amenidades/05.svg",
-		"title": "Aire acondicionado"
+		"title": { "es": "Aire acondicionado", "en": "" }
 	},
 	{
 		"img": "img/amenidades/12.svg",
-		"title": "Seguridad 24/7"
+		"title": { "es": "Seguridad 24/7", "en": "" }
 	},
 	{
 		"img": "img/amenidades/07.svg",
-		"title": "Renta de bicicletas"
+		"title": { "es": "Renta de bicicletas", "en": "" }
 	},
 	{
 		"img": "img/amenidades/08.svg",
-		"title": "Pet Friendly"
+		"title": { "es": "Pet Friendly", "en": "" }
 	},
 	{
 		"img": "img/amenidades/09.svg",
-		"title": "Cinema Room"
+		"title": { "es": "Cinema Room", "en": "" }
 	},
 	{
 		"img": "img/amenidades/10.svg",
-		"title": "Cocina"
+		"title": { "es": "Cocina", "en": "" }
 	},
 	{
 		"img": "img/amenidades/11.svg",
-		"title": "Cajón de articulos personales"
+		"title": { "es": "Cajón de articulos personales", "en": "" }
 	},
 	{
 		"img": "img/amenidades/12.svg",
-		"title": "Lockers"
+		"title": { "es": "Lockers", "en": "" }
 	},
 	{
 		"img": "img/amenidades/13.svg",
-		"title": "Terraza al aire libre"
+		"title": { "es": "Terraza al aire libre", "en": "" }
 	},
 	{
 		"img": "img/amenidades/14.svg",
-		"title": "Cámaras de seguridad en exterior y áreas comunes"
+		"title": { "es": "Cámaras de seguridad en exterior y áreas comunes", "en": "" }
 	}
 ]

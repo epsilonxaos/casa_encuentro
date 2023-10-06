@@ -4,14 +4,14 @@ import Titulo from '../helpers/Titulo'
 import mapa from '../../img/ubicacion/mapa.png'
 import mapaMovil from '../../img/ubicacion/mapamovil.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { useTranslation } from 'react-i18next'
 
 export default function Ubicacion() {
+	const { t } = useTranslation()
 	return (
 		<section className='pt-[90px]'>
-			<Titulo.H2 className='mb-0'>Nos ubicamos en:</Titulo.H2>
-			<Parrafo className='text-center'>
-				A 10 minutos del centro histórico, sobre la Calle 27 218, entre 26 y 28, García Ginerés, Mérida, Yucatán.
-			</Parrafo>
+			<Titulo.H2 className='mb-0'>{t('home.ubicacion.titulo')}</Titulo.H2>
+			<Parrafo className='text-center'>{t('home.ubicacion.direccion')}</Parrafo>
 
 			<LazyLoadImage
 				className='w-full max-w-max hidden md:block'

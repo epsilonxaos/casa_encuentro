@@ -6,16 +6,17 @@ import experiencias from '../data/experiencias.json'
 import { generarId } from '../helpers/helpers'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { DecoracionExp } from '../helpers/Icons'
+import parse from 'html-react-parser'
+import { useTranslation } from 'react-i18next'
 
 export default function Experiencias() {
+	const { t } = useTranslation()
 	return (
 		<>
 			<Container className='px-[15px] md:px-[25px] lg:px-[50px] pt-[90px] overflow-hidden relative max-w-[1320px]'>
-				<Titulo.H2 className='mb-0'>Haz de tu viaje una experiencia inolvidable</Titulo.H2>
+				<Titulo.H2 className='mb-0'>{t('home.experiencias.titulo')}</Titulo.H2>
 				<Parrafo className='text-center mb-[40px] max-w-[600px] mx-auto'>
-					<span className='font-semibold'>Diseñemos juntos el mejor itinerario</span> a tu medida con tours
-					personalizados para que conozcas los lugares que realmente deseas visitar, a tu ritmo y creando experiencias
-					inolvidables con las personas que amas.
+					{parse(t('home.experiencias.parrafo'))}
 				</Parrafo>
 			</Container>
 			<ExperienciaUI data={experiencias} />
@@ -26,6 +27,7 @@ export default function Experiencias() {
 const ExperienciaUI = ({ data = [] }) => {
 	if (!data.length) return
 	const ID = generarId(9)
+	const { i18n } = useTranslation()
 
 	return (
 		<div className='overflow-hidden relative z-[1] lg:px-[80px]'>
@@ -44,8 +46,8 @@ const ExperienciaUI = ({ data = [] }) => {
 							alt='Icono '
 							className='w-[99px] mx-auto mb-5'
 						/>
-						<Titulo className='mb-0'>{d.title}</Titulo>
-						<Parrafo className='text-center md:w-[90%] mx-auto'>{d.description}</Parrafo>
+						<Titulo className='mb-0'>{d.title[i18n.language]}</Titulo>
+						<Parrafo className='text-center md:w-[90%] mx-auto'>{d.description[i18n.language]}</Parrafo>
 
 						<GaleriaUI galeria={d.gallery} />
 					</article>

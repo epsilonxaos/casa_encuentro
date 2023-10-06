@@ -1,0 +1,29 @@
+[
+	{
+		"cover": "img/habitaciones/hab-comp.jpg",
+		"titulo": { "es": "Habitaciones compartidas", "en": "" },
+		"desc": { "es": "Cama en habitación compartida mixta de 6 camas", "en": "" },
+		"size": { "es": "Tamaño: 25 M2", "en": "" },
+		"amenidades": { "es": ["Aire acondicionado", "Baño privado", "Ropa de cama", "Mosquitero", "Ventilador"], "en": [] }
+	},
+	{
+		"cover": "img/habitaciones/hab-priv.jpg",
+		"titulo": { "es": "Habitaciones privadas dobles", "en": "" },
+		"desc": { "es": "2 Habitaciones privadas para dos personas con aire acondicionado", "en": "" },
+		"size": { "es": "Tamaño: Primera habitación 8 M2 y segunda habitación 10 M2", "en": "" },
+		"amenidades": {
+			"es": [
+				"TV",
+				"Escritorio más clósets",
+				"Silla de escritorio",
+				"Aire acondicionado",
+				"Baño privado",
+				"Ropa de cama",
+				"Mosquitero",
+				"Ventilador",
+				"Perchero para ropa"
+			],
+			"en": []
+		}
+	}
+]

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { twMerge } from 'tailwind-merge'
 
 const Botton = ({ children, type = 'button', className = '' }) => {
@@ -11,13 +12,14 @@ const Botton = ({ children, type = 'button', className = '' }) => {
 }
 
 const Reservar = ({ children, className = '' }) => {
+	const { t } = useTranslation()
 	return (
 		<a
 			className={twMerge('bg-naranja py-2 px-7 text-white font-medium text-sm', className)}
 			href='https://rbe.zaviaerp.com/?hotel=casaencuentro'
 			target='_blank'
 			rel='noopener noreferrer'>
-			{children ?? 'Reservar'}
+			{children ?? t('reservar')}
 		</a>
 	)
 }

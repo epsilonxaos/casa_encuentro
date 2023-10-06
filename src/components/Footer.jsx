@@ -1,8 +1,10 @@
 import Container from './container/Container'
 import { TfiLocationPin } from 'react-icons/tfi'
 import { FiPhone, FiFacebook, FiInstagram, FiMail } from 'react-icons/fi'
+import { useTranslation } from 'react-i18next'
 
 export default function Footer() {
+	const { t } = useTranslation()
 	return (
 		<footer className='bg-dorado'>
 			<Container className='text-black text-center py-[25px] text-sm md:text-sm'>
@@ -63,7 +65,7 @@ export default function Footer() {
 						href='http://'
 						target='_blank'
 						rel='noopener noreferrer'>
-						Política de privacidad
+						{t('footer.politicas')}
 					</a>
 				</p>
 			</div>

@@ -7,8 +7,10 @@ import Titulo from '../helpers/Titulo'
 import celular from '../../img/voluntariado/celular.png'
 import { twMerge } from 'tailwind-merge'
 import { Input } from '../forms/Input'
+import { useTranslation } from 'react-i18next'
 
 export default function Voluntariado() {
+	const { t } = useTranslation()
 	return (
 		<>
 			<Container className='px-[50px] md:px-[80px] lg:px-[120px] py-[90px]  xl:pt-[180px] overflow-hidden relative max-w-[1320px]'>
@@ -21,49 +23,39 @@ export default function Voluntariado() {
 						/>
 					</div>
 					<div className='w-full md:w-3/5'>
-						<Titulo.H2 className='mb-[20px]'>Haz de tu estadía una experiencia enriquecedora y gratificante.</Titulo.H2>
+						<Titulo.H2 className='mb-[20px]'>{t('home.voluntariado.titulo')}</Titulo.H2>
 						<hr className='border-crema w-[60%] max-w-[215px] mx-auto mb-[20px]' />
-						<Parrafo className='font-semibold'>
-							Nos llena de alegría y emoción darte la más cordial bienvenida a Casa Encuentro.
-						</Parrafo>
-						<Parrafo>
-							Estamos encantados de contar con personas tan dedicadas y comprometidas como tú, dispuestos a contribuir
-							con tu tiempo y esfuerzo para hacer de esta experiencia una verdadera comunidad de hospitalidad y
-							amistad. 
-						</Parrafo>
-						<Parrafo>
-							Mérida es una ciudad rica en cultura, historia y tradiciones, y estamos seguros de que disfrutarás
-							explorando cada rincón de esta encantadora ciudad. Además, tendrás la oportunidad de conocer a personas
-							maravillosas y aprender de su cultura y costumbres mientras trabajas en nuestro hostal.
-						</Parrafo>
-						<Titulo>Déjanos tu datos para contactarte</Titulo>
+						<Parrafo className='font-semibold'>{t('home.voluntariado.parrafo_1')}</Parrafo>
+						<Parrafo>{t('home.voluntariado.parrafo_2')}</Parrafo>
+						<Parrafo>{t('home.voluntariado.parrafo_3')}</Parrafo>
+						<Titulo.H3>{t('home.voluntariado.titulo_formulario')}</Titulo.H3>
 
 						<form
 							action=''
 							className='sm:grid sm:grid-cols-2 gap-4'>
 							<Input
-								label={'Nombre'}
+								label={t('nombre')}
 								name='nombre'
 								className=''
 							/>
 							<Input
-								label={'Apellidos'}
+								label={t('apellido')}
 								name='apellidos'
 								className=''
 							/>
 							<Input
 								type='email'
-								label={'Correo electrónico'}
+								label={t('correo')}
 								name='email'
 								className=''
 							/>
 							<Input
-								label={'Edad'}
+								label={t('edad')}
 								name='edad'
 								className=''
 							/>
 							<Input
-								label={'Ciudad'}
+								label={t('ciudad')}
 								name='ciudad'
 								className='col-span-2'
 							/>
@@ -72,7 +64,7 @@ export default function Voluntariado() {
 								<label
 									htmlFor='mensaje'
 									className='bg-black text-dorado text-sm'>
-									Déjanos tu mensaje
+									{t('mensaje')}
 								</label>
 								<textarea
 									id='mensaje'
@@ -80,7 +72,9 @@ export default function Voluntariado() {
 									className='block py-2.5 w-full text-sm text-white bg-transparent border border-dorado appearance-none !focus:outline-none focus:ring-0 focus:border-dorado peer px-3'></textarea>
 							</div>
 							<div className='col-span-2 text-center'>
-								<button className='bg-naranja py-2 px-7 text-white font-medium text-sm'>Quiero postularme</button>
+								<button className='bg-naranja py-2 px-7 text-white font-medium text-sm'>
+									{t('home.voluntariado.boton_enviar')}
+								</button>
 							</div>
 						</form>
 					</div>

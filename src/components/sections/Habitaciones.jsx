@@ -16,15 +16,16 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import Botton from '../helpers/Botton'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { useTranslation } from 'react-i18next'
+
+import habitaciones from '../data/habitaciones.json'
 
 export default function Habitaciones() {
+	const { t, i18n } = useTranslation()
 	return (
 		<>
 			<Container className='px-[50px] md:px-[80px] lg:px-[120px] pt-[90px] overflow-hidden relative max-w-[1320px]'>
-				<Titulo.H2 className='mb-[15px]'>
-					Hospédate con nosotros y <br />
-					siéntete en casa
-				</Titulo.H2>
+				<Titulo.H2 className='mb-[15px] max-w-[270px] mx-auto'>{t('home.habitaciones.titulo')}</Titulo.H2>
 				<LazyLoadImage
 					src={icono}
 					alt='Icono habitaciones'
@@ -34,30 +35,17 @@ export default function Habitaciones() {
 
 			<div className='overflow-hidden'>
 				<Container className='max-w-[1320px] px-0'>
-					<UIRoom
-						img={habComp}
-						title='Habitaciones Compartidas'
-						description='Cama en habitación compartida mixta de 6 camas'
-						sizeRoom='Tamaño: 25 M2'
-						amenidades={['Aire acondicionado', 'Baño privado', 'Ropa de Cama', 'Mosquitero', 'Ventilador']}
-					/>
-					<UIRoom
-						img={habPriv}
-						title='Habitaciones privadas dobles'
-						description='2 Habitaciones privadas para cuatro personas con aire acondicionado'
-						sizeRoom='Tamaño Primera habitación 8 M2 <br /> Tamaño Segunda habitación 10 M2'
-						amenidades={[
-							'TV',
-							'Escritorio más clósets',
-							'Aire acondicionado',
-							'Baño privado',
-							'Ropa de Cama',
-							'Mosquitero',
-							'Ventilador',
-							'Perchero para ropa',
-						]}
-						type='reverse'
-					/>
+					{habitaciones.map((h, key) => (
+						<UIRoom
+							key={'hab-' + key}
+							img={h.cover}
+							title={h.titulo[i18n.language]}
+							description={h.desc[i18n.language]}
+							sizeRoom={h.size[i18n.language]}
+							amenidades={h.amenidades[i18n.language]}
+							type={key % 2 === 0 ? '' : 'reverse'}
+						/>
+					))}
 				</Container>
 			</div>
 

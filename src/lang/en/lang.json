@@ -1,3 +1,46 @@
 {
-	"header.reservar_ahora": "Reserve now"
+	"header.reservar_ahora": "Reserve now",
+
+	"home.bienvenida.titulo": "¡BIENVENIDOS A CASA ENCUENTRO! TU HOGAR LEJOS DE CASA EN LA HERMOSA COLONIA JOAQUÍN GARCÍA GINERÉS DE MÉRIDA, YUCATÁN.",
+	"home.bienvenida.parrafo_1": "Esta colonia es un lugar lleno de historia y encanto. Su nombre honra a un destacado médico y científico cubano del siglo XIX, Joaquín García Ginerés, quien contribuyó significativamente al desarrollo de la medicina en México y se destacó por su amor por la comunidad y la cultura local.",
+	"home.bienvenida.parrafo_2": "Casa Encuentro, con su ambiente acogedor y su compromiso con la comunidad, rinde homenaje a este ilustre personaje. ¿Y por qué Casa Encuentro? Bueno, el nombre refleja la esencia de lo que somos. Queremos ser ese lugar donde tú, viajero, te encuentres contigo mismo, con otros viajeros, con la historia y cultura de Mérida. Aquí, los encuentros y las conexiones son el corazón de nuestra filosofía.",
+	"home.bienvenida.parrafo_3": "Nuestro hostal es el lugar perfecto para experimentar la auténtica vida de Mérida mientras disfrutas de una estancia cómoda y relajada. Estamos ubicados en una zona tranquila, lo que te garantiza noches de descanso reparador. Además, estamos a solo unos minutos del centro histórico, del icónico Paseo de Montejo y estamos a unas cuadras del Parque de las Américas, un lugar donde los lugareños y visitantes se congregan para disfrutar de conciertos al aire libre, actividades culturales y relajarse bajo la sombra de los árboles con una rica marquesita.",
+	"home.bienvenida.parrafo_4": "¡Reserva tu estancia ahora y empieza tu aventura en Casa Encuentro!",
+
+	"home.amenidades.titulo": "Espacios diseñados pensando en tu comodidad y tus necesidades",
+
+	"home.habitaciones.titulo": "Hospédate con nosotros y siéntete en casa",
+
+	"home.experiencias.titulo": "Convierte tu estadía en el mejor viaje de tu vida",
+	"home.experiencias.parrafo": "Diseñemos juntos el mejor itinerario a tu medida con tours personalizados para que conozcas los lugares que realmente deseas visitar, a tu ritmo y creando experiencias inolvidables con las personas que amas.",
+
+	"home.reviews.titulo": "HISTORIA DE LOS HUÉSPEDES",
+	"home.reviews.comentario_1": "Una excelente opción para disfrutar cómodamente de Mérida y para hacer nuevos amigos. ¡Me encantó!",
+	"home.reviews.comentario_2": "Además de ser un lugar cómodo y bello, en todo momento me hicieron sentir en casa. Espero volver pronto.",
+	"home.reviews.personal": "Personal",
+	"home.reviews.instalaciones": "Instalaciones y servicios",
+	"home.reviews.limpieza": "Limpieza",
+	"home.reviews.confort": "Confort",
+	"home.reviews.relacion": "Relación calidad - precio",
+	"home.reviews.ubicacion": "Ubicación",
+
+	"home.ubicacion.titulo": "NOS UBICAMOS",
+	"home.ubicacion.direccion": "A 10 minutos del centro histórico, sobre la Calle 27 218, entre 26 y 28, García Ginerés, Mérida, Yucatán.",
+
+	"home.voluntariado.titulo": "Casa Encuentro: Haz de tu estadía una experiencia enriquecedora y gratificante",
+	"home.voluntariado.parrafo_1": "Nos llena de alegría y emoción darte la más cordial bienvenida a Casa Encuentro",
+	"home.voluntariado.parrafo_2": "Estamos encantados de contar con personas tan dedicadas y comprometidas como tú, dispuestos a contribuir con tu tiempo y esfuerzo para hacer de esta experiencia una verdadera comunidad de hospitalidad y amistad.",
+	"home.voluntariado.parrafo_3": "Mérida es una ciudad rica en cultura, historia y tradiciones, y estamos seguros de que disfrutarás explorando cada rincón de esta encantadora ciudad. Además, tendrás la oportunidad de conocer a personas maravillosas y aprender de su cultura y costumbres mientras trabajas en nuestro hostal.",
+	"home.voluntariado.titulo_formulario": "Quiero postularme",
+	"home.voluntariado.boton_enviar": "Quiero postularme",
+
+	"nombre": "Nombre",
+	"apellido": "Apellido",
+	"correo": "Correo electrónico",
+	"edad": "Edad",
+	"ciudad": "Ciudad",
+	"mensaje": "Deja tu mensaje",
+	"reservar": "Reservar",
+
+	"footer.politicas": "Políticas de privacidad"
 }
