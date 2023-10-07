@@ -10,7 +10,8 @@
 		"amenidades": {
 			"es": ["Aire acondicionado", "Baño privado", "Ropa de cama", "Mosquitero", "Ventilador"],
 			"en": ["Free WIFI", "Mosquito net", "Private bathroom", "Bed linen included", "Fan"]
-		}
+		},
+		"galeria": ["img/habitaciones/habc/1.jpg", "img/habitaciones/habc/2.jpg", "img/habitaciones/habc/3.jpg"]
 	},
 	{
 		"cover": "img/habitaciones/hab-priv.jpg",
@@ -45,6 +46,7 @@
 				"Fan",
 				"Clothes rack"
 			]
-		}
+		},
+		"galeria": ["img/habitaciones/habp/1.jpg", "img/habitaciones/habp/2.jpg", "img/habitaciones/habp/3.jpg"]
 	}
 ]

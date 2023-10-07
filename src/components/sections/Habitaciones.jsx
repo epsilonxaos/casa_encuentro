@@ -44,6 +44,7 @@ export default function Habitaciones() {
 							sizeRoom={h.size[i18n.language]}
 							amenidades={h.amenidades[i18n.language]}
 							type={key % 2 === 0 ? '' : 'reverse'}
+							gallery={h.galeria}
 						/>
 					))}
 				</Container>
@@ -57,7 +58,7 @@ export default function Habitaciones() {
 	)
 }
 
-function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'normal' }) {
+function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'normal', gallery = [] }) {
 	return (
 		<div
 			className={`flex flex-wrap items-center mb-[60px] md:mb-[80px] lg:mb-[100px] ${
@@ -98,34 +99,15 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 					}}
 					speed={1500}
 					loop={true}>
-					<SwiperSlide>
-						<LazyLoadImage
-							src={img}
-							alt=''
-							className='h-[230px] md:h-[330px] object-cover w-full'
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<LazyLoadImage
-							src={img}
-							alt=''
-							className='h-[230px] md:h-[330px] object-cover w-full'
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<LazyLoadImage
-							src={img}
-							alt=''
-							className='h-[230px] md:h-[330px] object-cover w-full'
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<LazyLoadImage
-							src={img}
-							alt=''
-							className='h-[230px] md:h-[330px] object-cover w-full'
-						/>
-					</SwiperSlide>
+					{gallery.map((g, key) => (
+						<SwiperSlide key={'galeria-' + key + '-' + title}>
+							<LazyLoadImage
+								src={g}
+								alt='Imagen de galeria'
+								className='h-[230px] md:h-[330px] object-cover w-full'
+							/>
+						</SwiperSlide>
+					))}
 				</Swiper>
 			</div>
 		</div>
