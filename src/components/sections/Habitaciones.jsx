@@ -65,7 +65,7 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 			}`}>
 			<div className={`w-full md:w-[45%] pl-10 pr-4 mb-7 md:mb-0`}>
 				<h3 className='text-left font-juliusSansOne text-base md:text-xl lg:text-2xl xl:text-3xl'>{title}</h3>
-				<Parrafo className='font-medium mb-0'>{description}</Parrafo>
+				<Parrafo className='font-medium mb-0'>{parse(description)}</Parrafo>
 				<Parrafo className='mb-[15px]'>{parse(sizeRoom)}</Parrafo>
 
 				<ul className='sm:columns-2 list-disc pl-[15px] mb-[20px]'>

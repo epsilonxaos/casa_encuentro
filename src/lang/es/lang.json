@@ -1,5 +1,8 @@
 {
 	"header.reservar_ahora": "Reservar ahora",
+	"header.reservar": "Reservar",
+	"header.voluntariado": "Voluntariado",
+	"header.resenias": "Reseñas",
 
 	"home.bienvenida.titulo": "¡BIENVENIDOS A CASA ENCUENTRO! TU HOGAR LEJOS DE CASA EN LA HERMOSA COLONIA JOAQUÍN GARCÍA GINERÉS DE MÉRIDA, YUCATÁN.",
 	"home.bienvenida.parrafo_1": "Esta colonia es un lugar lleno de historia y encanto. Su nombre honra a un destacado médico y científico cubano del siglo XIX, Joaquín García Ginerés, quien contribuyó significativamente al desarrollo de la medicina en México y se destacó por su amor por la comunidad y la cultura local.",
@@ -41,6 +44,7 @@
 	"ciudad": "Ciudad",
 	"mensaje": "Deja tu mensaje",
 	"reservar": "Reservar",
+	"ocultar": "Ocultar",
 
 	"footer.politicas": "Políticas de privacidad"
 }

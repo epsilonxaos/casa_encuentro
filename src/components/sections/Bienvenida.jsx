@@ -23,7 +23,7 @@ export default function Bienvenida() {
 				<Titulo>{t('home.bienvenida.titulo')}</Titulo>
 				<Parrafo>{t('home.bienvenida.parrafo_1')}</Parrafo>
 				<Parrafo>{parse(t('home.bienvenida.parrafo_2'))}</Parrafo>
-				{i18n.language !== 'en' && <Parrafo>{parse(t('home.bienvenida.parrafo_3'))}</Parrafo>}
+				<Parrafo>{parse(t('home.bienvenida.parrafo_3'))}</Parrafo>
 				<Parrafo className='font-semibold text-center mb-50px'>{t('home.bienvenida.parrafo_4')}</Parrafo>
 			</Container>
 

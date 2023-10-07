@@ -1,58 +1,61 @@
 [
 	{
 		"img": "img/amenidades/01.svg",
-		"title": { "es": "Ropa de cama incluida", "en": "" }
+		"title": { "es": "Ropa de cama incluida", "en": "Bed linen included" }
 	},
 	{
 		"img": "img/amenidades/02.svg",
-		"title": { "es": "Wifi", "en": "" }
+		"title": { "es": "Wifi Gratis", "en": "Free WIFI" }
 	},
 	{
 		"img": "img/amenidades/05.svg",
-		"title": { "es": "Gym", "en": "" }
+		"title": { "es": "Gym", "en": "Gym" }
 	},
 	{
 		"img": "img/amenidades/04.svg",
-		"title": { "es": "Piscina", "en": "" }
+		"title": { "es": "Piscina", "en": "Pool" }
 	},
 	{
 		"img": "img/amenidades/05.svg",
-		"title": { "es": "Aire acondicionado", "en": "" }
+		"title": { "es": "Aire acondicionado", "en": "Air-conditioning" }
 	},
 	{
 		"img": "img/amenidades/12.svg",
-		"title": { "es": "Seguridad 24/7", "en": "" }
+		"title": { "es": "Seguridad 24/7", "en": "24 hour security" }
 	},
 	{
 		"img": "img/amenidades/07.svg",
-		"title": { "es": "Renta de bicicletas", "en": "" }
+		"title": { "es": "Renta de bicicletas", "en": "Rental bicycles" }
 	},
 	{
 		"img": "img/amenidades/08.svg",
-		"title": { "es": "Pet Friendly", "en": "" }
+		"title": { "es": "Pet Friendly", "en": "Pet Friendly" }
 	},
 	{
 		"img": "img/amenidades/09.svg",
-		"title": { "es": "Cinema Room", "en": "" }
+		"title": { "es": "Cinema Room", "en": "Cinema Room" }
 	},
 	{
 		"img": "img/amenidades/10.svg",
-		"title": { "es": "Cocina", "en": "" }
+		"title": { "es": "Cocina", "en": "Kitchen" }
 	},
 	{
 		"img": "img/amenidades/11.svg",
-		"title": { "es": "Cajón de articulos personales", "en": "" }
+		"title": { "es": "Cajón de articulos personales", "en": "Strongbox" }
 	},
 	{
 		"img": "img/amenidades/12.svg",
-		"title": { "es": "Lockers", "en": "" }
+		"title": { "es": "Lockers", "en": "Lockers" }
 	},
 	{
 		"img": "img/amenidades/13.svg",
-		"title": { "es": "Terraza al aire libre", "en": "" }
+		"title": { "es": "Terraza al aire libre", "en": "Outdoor terrace" }
 	},
 	{
 		"img": "img/amenidades/14.svg",
-		"title": { "es": "Cámaras de seguridad en exterior y áreas comunes", "en": "" }
+		"title": {
+			"es": "Cámaras de seguridad en exterior y áreas comunes",
+			"en": "Security cameras outside and common areas"
+		}
 	}
 ]

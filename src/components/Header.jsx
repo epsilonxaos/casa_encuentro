@@ -71,12 +71,13 @@ const Language = () => {
 }
 
 const Menu = ({ className = '' }) => {
+	const { t } = useTranslation()
 	return (
 		<ul className={className}>
 			<li>Hostal</li>
-			<li>Reservar</li>
-			<li>Voluntariado</li>
-			<li>Reseñas</li>
+			<li>{t('header.reservar')}</li>
+			<li>{t('header.voluntariado')}</li>
+			<li>{t('header.resenias')}</li>
 			<li className='hidden md:inline'>
 				<Language />
 			</li>
@@ -88,7 +89,7 @@ const FormReservaciones = () => {
 	const [currentDate, setCurrentDate] = useState(false)
 	const [checkIn, setCheckIn] = useState(false)
 	const [checkOut, setCheckOut] = useState(false)
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(true)
 
 	const { t } = useTranslation()
 
@@ -164,7 +165,7 @@ const FormReservaciones = () => {
 					</>
 				) : (
 					<>
-						<FaTimes className='inline mr-1' /> Cerrar
+						<FaTimes className='inline mr-1' /> {t('ocultar')}
 					</>
 				)}
 			</button>
