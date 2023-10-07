@@ -10,26 +10,45 @@ import Voluntariado from './components/sections/Voluntariado'
 import Reviews from './components/sections/Reviews'
 import Entrada from './components/Entrada'
 import { useState } from 'react'
+import ScrollToTop from './components/scrollToTop/ScrollToTop'
+import { AnimatePresence } from 'framer-motion'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import Transition from './components/animations/Transitions'
 
 function App() {
 	const [into, setInto] = useState(false)
+	const location = useLocation()
 
 	if (!into) return <Entrada onClick={() => setInto(true)} />
 
 	return (
 		<>
-			<Header />
-			<main>
-				<Banner />
-				<Bienvenida />
-				<Amenidades />
-				<Habitaciones />
-				<Experiencias />
-				<Reviews />
-				<Ubicacion />
-				<Voluntariado />
-			</main>
-			<Footer />
+			<AnimatePresence mode='wait'>
+				<ScrollToTop />
+				<Header />
+				<Routes
+					location={location}
+					key={location.pathname}>
+					<Route
+						index
+						element={
+							<Transition>
+								<main>
+									<Banner />
+									<Bienvenida />
+									<Amenidades />
+									<Habitaciones />
+									<Experiencias />
+									<Reviews />
+									<Ubicacion />
+									<Voluntariado />
+								</main>
+							</Transition>
+						}
+					/>
+				</Routes>
+				<Footer />
+			</AnimatePresence>
 		</>
 	)
 }

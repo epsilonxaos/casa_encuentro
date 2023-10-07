@@ -36,7 +36,7 @@ export default function Entrada({ onClick }) {
 			exit: {
 				opacity: 0,
 				transition: {
-					duration: 0.5,
+					duration: 1.5,
 				},
 			},
 		},
@@ -73,7 +73,7 @@ export default function Entrada({ onClick }) {
 	}
 	return (
 		<AnimatePresence mode='wait'>
-			<div className='bg-black h-screen w-full flex items-center justify-center'>
+			<div className='bg-black h-screen w-full flex items-center justify-center absolute top-0 left-0'>
 				<motion.div
 					onHoverStart={e => setIsHover(!isHover)}
 					onHoverEnd={e => setIsHover(!isHover)}

@@ -13,10 +13,12 @@ export default function Voluntariado() {
 	const { t } = useTranslation()
 	return (
 		<>
-			<Container className='px-[50px] md:px-[80px] lg:px-[120px] py-[90px]  xl:pt-[180px] overflow-hidden relative max-w-[1320px]'>
+			<Container
+				className='px-[50px] md:px-[80px] lg:px-[120px] py-[90px]  xl:pt-[180px] overflow-hidden relative max-w-[1320px]'
+				id={'voluntariado'}>
 				<div className='flex flex-wrap items-center'>
 					<div className='w-full md:w-2/5 mb-[30px] md:mb-0'>
-						<LazyLoadImage
+						<img
 							src={celular}
 							alt='Celular'
 							className='w-[80%] max-w-[400px] mx-auto'

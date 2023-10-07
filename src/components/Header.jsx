@@ -11,6 +11,7 @@ import { DateTime } from 'luxon'
 import { FaTimes } from 'react-icons/fa'
 import { BsCalendarWeek } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
 	const [open, setOpen] = useState(false)
@@ -74,10 +75,18 @@ const Menu = ({ className = '' }) => {
 	const { t } = useTranslation()
 	return (
 		<ul className={className}>
-			<li>Hostal</li>
-			<li>{t('header.reservar')}</li>
-			<li>{t('header.voluntariado')}</li>
-			<li>{t('header.resenias')}</li>
+			<li>
+				<Link to={'/#hostal'}>Hostal</Link>
+			</li>
+			<li>
+				<Link to={'/#habitaciones'}>{t('header.reservar')}</Link>
+			</li>
+			<li>
+				<Link to={'/#voluntariado'}>{t('header.voluntariado')}</Link>
+			</li>
+			<li>
+				<Link to={'/#reviews'}>{t('header.resenias')}</Link>
+			</li>
 			<li className='hidden md:inline'>
 				<Language />
 			</li>

@@ -13,12 +13,12 @@ export default function Ubicacion() {
 			<Titulo.H2 className='mb-0'>{t('home.ubicacion.titulo')}</Titulo.H2>
 			<Parrafo className='text-center'>{t('home.ubicacion.direccion')}</Parrafo>
 
-			<LazyLoadImage
+			<img
 				className='w-full max-w-max hidden md:block'
 				src={mapa}
 				alt='Mapa'
 			/>
-			<LazyLoadImage
+			<img
 				className='w-full max-w-max md:hidden'
 				src={mapaMovil}
 				alt='Mapa movil'

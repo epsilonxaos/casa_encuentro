@@ -12,7 +12,9 @@ import { useTranslation } from 'react-i18next'
 export default function Reviews() {
 	const { t } = useTranslation()
 	return (
-		<div className='bg-dorado'>
+		<div
+			className='bg-dorado'
+			id='reviews'>
 			<Container className='bg px-[20px] py-[55px] overflow-hidden relative max-w-[1320px]'>
 				<Titulo.H2 className='text-black'>{t('home.reviews.titulo')}</Titulo.H2>
 				<div className='flex flex-wrap mb-[40px]'>

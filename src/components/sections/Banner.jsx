@@ -5,7 +5,7 @@ import sello from '../../img/sello.png'
 export default function Banner() {
 	return (
 		<div className='relative'>
-			<LazyLoadImage
+			<img
 				src={banner}
 				className='w-full aspect-square sm:aspect-video max-h-[calc(100vh-80px)] object-cover'
 				alt='Banner principal'

@@ -41,7 +41,7 @@ const ExperienciaUI = ({ data = [] }) => {
 							k % 2 == 0 ? 'bg-[#090909]' : ''
 						} py-[15px] px-[15px] max-w-[1260px] mx-auto md:px-[25px] lg:px-[50px] mb-[40px]`}
 						key={'galeria-' + ID + '-' + k}>
-						<LazyLoadImage
+						<img
 							src={d.icon}
 							alt='Icono '
 							className='w-[99px] mx-auto mb-5'
@@ -67,7 +67,7 @@ const GaleriaUI = ({ galeria = [] }) => {
 				<figure
 					className='w-1/2 sm:w-1/3 md:w-1/3 xl:w-1/5'
 					key={'galeria-' + IDGaleria + '-' + k}>
-					<LazyLoadImage
+					<img
 						src={g}
 						alt='Imagen galeria'
 						className='object-cover'

@@ -24,9 +24,13 @@ export default function Habitaciones() {
 	const { t, i18n } = useTranslation()
 	return (
 		<>
-			<Container className='px-[50px] md:px-[80px] lg:px-[120px] pt-[90px] overflow-hidden relative max-w-[1320px]'>
-				<Titulo.H2 className='mb-[15px] max-w-[270px] mx-auto'>{t('home.habitaciones.titulo')}</Titulo.H2>
-				<LazyLoadImage
+			<Container
+				className='px-[50px] md:px-[80px] lg:px-[120px] pt-[90px] overflow-hidden relative max-w-[1320px]'
+				id={'habitaciones'}>
+				<Titulo.H2 className='mb-[15px] max-w-[270px] 2xl:max-w-[350px] mx-auto'>
+					{t('home.habitaciones.titulo')}
+				</Titulo.H2>
+				<img
 					src={icono}
 					alt='Icono habitaciones'
 					className='mb-[50px] lg:mb-[90px] w-[90px] mx-auto'
@@ -101,7 +105,7 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 					loop={true}>
 					{gallery.map((g, key) => (
 						<SwiperSlide key={'galeria-' + key + '-' + title}>
-							<LazyLoadImage
+							<img
 								src={g}
 								alt='Imagen de galeria'
 								className='h-[230px] md:h-[330px] object-cover w-full'
