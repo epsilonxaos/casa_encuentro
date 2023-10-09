@@ -1,61 +1,100 @@
 [
 	{
 		"img": "img/amenidades/01.svg",
-		"title": { "es": "Ropa de cama incluida", "en": "Bed linen included" }
+		"title": {
+			"en": "Bed linen included",
+			"es": "Ropa de cama incluida"
+		}
 	},
 	{
 		"img": "img/amenidades/02.svg",
-		"title": { "es": "Wifi Gratis", "en": "Free WIFI" }
+		"title": {
+			"en": "Free WIFI",
+			"es": "Wifi Gratis"
+		}
 	},
 	{
 		"img": "img/amenidades/05.svg",
-		"title": { "es": "Gym", "en": "Gym" }
+		"title": {
+			"en": "Gym",
+			"es": "Gym"
+		}
 	},
 	{
 		"img": "img/amenidades/04.svg",
-		"title": { "es": "Piscina", "en": "Pool" }
+		"title": {
+			"en": "Pool",
+			"es": "Piscina"
+		}
 	},
 	{
 		"img": "img/amenidades/05.svg",
-		"title": { "es": "Aire acondicionado", "en": "Air-conditioning" }
+		"title": {
+			"en": "Air-conditioning",
+			"es": "Aire acondicionado"
+		}
 	},
 	{
 		"img": "img/amenidades/12.svg",
-		"title": { "es": "Seguridad 24/7", "en": "24 hour security" }
+		"title": {
+			"en": "24 hour security",
+			"es": "Seguridad 24/7"
+		}
 	},
 	{
 		"img": "img/amenidades/07.svg",
-		"title": { "es": "Renta de bicicletas", "en": "Rental bicycles" }
+		"title": {
+			"en": "Rental bicycles",
+			"es": "Renta de bicicletas"
+		}
 	},
 	{
 		"img": "img/amenidades/08.svg",
-		"title": { "es": "Pet Friendly", "en": "Pet Friendly" }
+		"title": {
+			"en": "Pet Friendly",
+			"es": "Pet Friendly"
+		}
 	},
 	{
 		"img": "img/amenidades/09.svg",
-		"title": { "es": "Cinema Room", "en": "Cinema Room" }
+		"title": {
+			"en": "Cinema Room",
+			"es": "Cinema Room"
+		}
 	},
 	{
 		"img": "img/amenidades/10.svg",
-		"title": { "es": "Cocina", "en": "Kitchen" }
-	},
-	{
-		"img": "img/amenidades/11.svg",
-		"title": { "es": "Cajón de articulos personales", "en": "Strongbox" }
+		"title": {
+			"en": "Kitchen",
+			"es": "Cocina"
+		}
 	},
 	{
 		"img": "img/amenidades/12.svg",
-		"title": { "es": "Lockers", "en": "Lockers" }
+		"title": {
+			"en": "Lockers",
+			"es": "Lockers"
+		}
 	},
 	{
 		"img": "img/amenidades/13.svg",
-		"title": { "es": "Terraza al aire libre", "en": "Outdoor terrace" }
+		"title": {
+			"en": "Outdoor terrace",
+			"es": "Terraza al aire libre"
+		}
+	},
+	{
+		"img": "img/amenidades/11.svg",
+		"title": {
+			"en": "Strongbox",
+			"es": "Cajón de articulos personales"
+		}
 	},
 	{
 		"img": "img/amenidades/14.svg",
 		"title": {
-			"es": "Cámaras de seguridad en exterior y áreas comunes",
-			"en": "Security cameras outside and common areas"
+			"en": "Security cameras outside and common areas",
+			"es": "Cámaras de seguridad en exterior y áreas comunes"
 		}
 	}
 ]
