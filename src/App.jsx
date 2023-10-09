@@ -16,7 +16,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Transition from './components/animations/Transitions'
 
 function App() {
-	const [into, setInto] = useState(false)
+	const [into, setInto] = useState(true)
 	const location = useLocation()
 
 	if (!into) return <Entrada onClick={() => setInto(true)} />

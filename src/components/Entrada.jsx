@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { Sello } from './helpers/Icons'
+import { Sello, SelloStroke } from './helpers/Icons'
 import { useState } from 'react'
 
 export default function Entrada({ onClick }) {
