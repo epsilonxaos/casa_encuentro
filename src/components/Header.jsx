@@ -12,6 +12,7 @@ import { FaTimes } from 'react-icons/fa'
 import { BsCalendarWeek } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Header() {
 	const [open, setOpen] = useState(false)
@@ -111,10 +112,26 @@ const FormReservaciones = () => {
 
 	if (!checkIn && !checkOut) return
 
+	const v = {
+		open: {
+			top: 0,
+			height: 0,
+		},
+		close: {
+			top: -100,
+			height: 0,
+		},
+	}
+
 	return (
 		<div className='absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-[calc(100%+80px) z-[1] w-full sm:max-w-[400px]'>
-			{open && (
-				<div className='relative px-2 bg-black rounded-b z-[1]'>
+			<AnimatePresence mode='wait'>
+				<motion.div
+					initial={v.close}
+					animate={open ? v.open : v.close}
+					exit={open ? v.open : v.close}
+					transition={{ duration: 1 }}
+					className='relative px-2 bg-black rounded-b z-[1]'>
 					<form
 						action='https://rbe.zaviaerp.com/'
 						method='get'>
@@ -140,7 +157,7 @@ const FormReservaciones = () => {
 						/>
 						<div className='flex justify-center flex-wrap py-3'>
 							<InputCalendar
-								className='w-[calc(50%-20px)] sm:w-auto'
+								className='w-auto'
 								selected={checkIn.date}
 								minDate={currentDate}
 								startDate={checkIn.date}
@@ -160,8 +177,8 @@ const FormReservaciones = () => {
 							</button>
 						</div>
 					</form>
-				</div>
-			)}
+				</motion.div>
+			</AnimatePresence>
 
 			<button
 				onClick={() => setOpen(!open)}
@@ -194,7 +211,7 @@ const InputCalendar = ({
 	selectsStart,
 }) => {
 	return (
-		<div className={twMerge('relative z-0 w-full sm:w-[190px] mb-[15px] sm:mb-0 group sm:mr-3', className)}>
+		<div className={twMerge('relative z-0 w-[190px] group mr-2 sm:mr-3', className)}>
 			<ReactDatePicker
 				{...(name && { name })}
 				{...(selected && { selected })}
@@ -205,7 +222,7 @@ const InputCalendar = ({
 				{...(endDate && { endDate })}
 				locale={es}
 				selectsRange
-				className='block py-2.5 !w-[90%] sm:!w-[190px] mx-auto text-sm text-white bg-transparent border border-dorado appearance-none !focus:outline-none focus:ring-0 focus:border-dorado peer px-1 text-center'
+				className='block py-2.5 w-[190px] mx-auto text-sm text-white bg-transparent border border-dorado appearance-none !focus:outline-none focus:ring-0 focus:border-dorado peer px-1 text-center'
 			/>
 			<label
 				htmlFor={name}
