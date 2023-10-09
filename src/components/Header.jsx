@@ -114,24 +114,22 @@ const FormReservaciones = () => {
 
 	const v = {
 		open: {
-			top: 0,
-			height: 0,
+			height: 'auto',
 		},
 		close: {
-			top: -100,
-			height: 0,
+			height: '0px',
 		},
 	}
 
 	return (
-		<div className='absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-[calc(100%+80px) z-[1] w-full sm:max-w-[400px]'>
-			<AnimatePresence mode='wait'>
+		<AnimatePresence mode='wait'>
+			<motion.div className='absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-[calc(100%+80px) z-[1] w-full sm:max-w-[400px]'>
 				<motion.div
 					initial={v.close}
 					animate={open ? v.open : v.close}
 					exit={open ? v.open : v.close}
-					transition={{ duration: 1 }}
-					className='relative px-2 bg-black rounded-b z-[1]'>
+					transition={{ duration: 0.5 }}
+					className='relative px-2 bg-black rounded-b z-[1] overflow-hidden'>
 					<form
 						action='https://rbe.zaviaerp.com/'
 						method='get'>
@@ -178,24 +176,23 @@ const FormReservaciones = () => {
 						</div>
 					</form>
 				</motion.div>
-			</AnimatePresence>
-
-			<button
-				onClick={() => setOpen(!open)}
-				className={`absolute flex items-center -z-[1] -bottom-[27px] left-1/2 -translate-x-1/2 ${
-					!open ? 'bg-naranja' : 'bg-slate-900'
-				} text-white py-1 px-2 rounded-b text-sm`}>
-				{!open ? (
-					<>
-						<BsCalendarWeek className='inline mr-1' /> {t('header.reservar_ahora')}
-					</>
-				) : (
-					<>
-						<FaTimes className='inline mr-1' /> {t('ocultar')}
-					</>
-				)}
-			</button>
-		</div>
+				<button
+					onClick={() => setOpen(!open)}
+					className={`absolute flex items-center -z-[1] -bottom-[27px] left-1/2 -translate-x-1/2 ${
+						!open ? 'bg-naranja' : 'bg-slate-900'
+					} text-white py-1 px-2 rounded-b text-sm`}>
+					{!open ? (
+						<>
+							<BsCalendarWeek className='inline mr-1' /> {t('header.reservar_ahora')}
+						</>
+					) : (
+						<>
+							<FaTimes className='inline mr-1' /> {t('ocultar')}
+						</>
+					)}
+				</button>
+			</motion.div>
+		</AnimatePresence>
 	)
 }
 
