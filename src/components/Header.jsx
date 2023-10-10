@@ -12,38 +12,130 @@ import { FaTimes } from 'react-icons/fa'
 import { BsCalendarWeek } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, scroll } from 'framer-motion'
 
-export default function Header() {
-	const [open, setOpen] = useState(false)
-	const v = {
+const v1 = {
+	hide: {
+		top: -10,
+	},
+	show: {
+		top: 80,
+	},
+}
+
+const variants = {
+	menu: {
 		hide: {
-			top: -10,
+			opacity: 0,
+			when: 'afterChildren',
+		},
+		hideD: {
+			display: 'none',
+			transition: {
+				when: 'beforeChildren',
+				// delay: 0.1,
+			},
 		},
 		show: {
-			top: 80,
+			display: 'block',
+			when: 'afterChildren',
 		},
+		showB: {
+			opacity: 1,
+			transition: {
+				when: 'beforeChildren',
+				// delay: 0.1,
+			},
+		},
+	},
+}
+
+const imgV = {
+	normal: {
+		left: 0,
+		translateX: '0%',
+	},
+	center: {
+		left: '50%',
+		translateX: '-50%',
+	},
+}
+export default function Header({ scrollYProgress }) {
+	const [open, setOpen] = useState(false)
+	const [scrollPosition, setScrollPosition] = useState(0)
+	const handleScroll = () => {
+		const position = window.pageYOffset
+		setScrollPosition(position)
 	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true })
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
 
 	return (
 		<>
 			<header className='fixed top-0 left-0 w-full z-50 text-xs md:text-base'>
 				<div className='bg-black'>
-					{/* //TODO: Verificar los espaciados de padding en X */}
-					<Container className=''>
+					{/* //? Activacion solo escritorio, debido a tiempos cortos para la entrega y presion por parte del cliente */}
+					<Container className='hidden md:block'>
+						<AnimatePresence mode='wait'>
+							<nav className='flex items-center justify-between py-[25px]'>
+								<motion.img
+									src={logo}
+									initial={imgV.normal}
+									animate={scrollPosition <= 250 ? imgV.normal : imgV.center}
+									alt='Casa encuentro'
+									className='w-[180px] relative cursor-pointer'
+									onClick={() => {
+										window.scrollTo({ top: 0, left: 0, behavior: 'smooth', transition: { duration: 0.4 } })
+									}}
+								/>
+								<div className='flex relative pr-[calc(30px+52px)] min-h-[24px]'>
+									<AnimatePresence mode='wait'>
+										{scrollPosition <= 250 && (
+											<motion.div
+												initial={[variants.menu.hide, variants.menu.hideD]}
+												animate={[variants.menu.show, variants.menu.showB]}
+												exit={variants.menu.hide}
+												transition={{ duration: 0.3 }}>
+												<Menu className='flex md:items-center md:gap-[33px] menuText' />
+											</motion.div>
+										)}
+									</AnimatePresence>
+									<div className='ml-[30px] absolute right-0 menuText'>
+										<Language />
+									</div>
+								</div>
+								<button
+									onClick={() => setOpen(!open)}
+									className='border border-dorado px-2 py-1 md:hidden'>
+									Menú
+								</button>
+							</nav>
+						</AnimatePresence>
+					</Container>
+
+					{/* //? Activacion solo movil */}
+					<Container className='md:hidden'>
 						<nav className='flex items-center justify-between py-[25px]'>
-							<div className='md:hidden'>
+							<div>
 								<Language />
 							</div>
 							<img
 								src={logo}
 								alt='Casa encuentro'
-								className='w-[180px]'
+								className='w-[180px] relative cursor-pointer'
+								onClick={() => {
+									window.scrollTo({ top: 0, left: 0, behavior: 'smooth', transition: { duration: 0.4 } })
+								}}
 							/>
-							<Menu className='hidden md:flex md:items-center md:gap-[33px] menuText' />
 							<button
 								onClick={() => setOpen(!open)}
-								className='border border-dorado px-2 py-1 md:hidden'>
+								className='border border-dorado px-2 py-1'>
 								Menú
 							</button>
 						</nav>
@@ -52,9 +144,9 @@ export default function Header() {
 				<AnimatePresence mode='wait'>
 					{open && (
 						<motion.div
-							initial={v.hide}
-							animate={v.show}
-							exit={v.hide}
+							initial={v1.hide}
+							animate={v1.show}
+							exit={v1.hide}
 							transition={{ duration: 0.3 }}
 							className='w-full fixed z-[-1] top-[80px] left-0 py-[25px] pt-5 bg-black md:hidden'>
 							<Menu className='flex items-center justify-center gap-[20px] menuText pt-0' />
@@ -106,9 +198,6 @@ const Menu = ({ className = '' }) => {
 			</li>
 			<li>
 				<Link to={'/#reviews'}>{t('header.resenias')}</Link>
-			</li>
-			<li className='hidden md:inline'>
-				<Language />
 			</li>
 		</ul>
 	)
