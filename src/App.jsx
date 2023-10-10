@@ -17,7 +17,7 @@ import Transition from './components/animations/Transitions'
 import { Toaster } from 'sonner'
 
 function App() {
-	const [into, setInto] = useState(true)
+	const [into, setInto] = useState(false)
 	const location = useLocation()
 
 	if (!into) return <Entrada onClick={() => setInto(true)} />
