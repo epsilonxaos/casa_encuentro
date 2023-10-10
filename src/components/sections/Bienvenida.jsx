@@ -23,9 +23,9 @@ export default function Bienvenida() {
 					options={{ className: 'w-[40px] md:w-[60px] lg:w-[77px]' }}
 				/>
 				<Titulo>{t('home.bienvenida.titulo')}</Titulo>
-				<Parrafo>{t('home.bienvenida.parrafo_1')}</Parrafo>
-				<Parrafo>{parse(t('home.bienvenida.parrafo_2'))}</Parrafo>
-				<Parrafo>{parse(t('home.bienvenida.parrafo_3'))}</Parrafo>
+				<Parrafo className='text-center'>{t('home.bienvenida.parrafo_1')}</Parrafo>
+				<Parrafo className='text-center'>{parse(t('home.bienvenida.parrafo_2'))}</Parrafo>
+				<Parrafo className='text-center'>{parse(t('home.bienvenida.parrafo_3'))}</Parrafo>
 				<Parrafo className='font-semibold text-center mb-50px'>{t('home.bienvenida.parrafo_4')}</Parrafo>
 			</Container>
 

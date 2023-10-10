@@ -66,22 +66,26 @@ function UIRoom({ img, title, amenidades = [], description, sizeRoom, type = 'no
 	return (
 		<div
 			className={`flex flex-wrap items-center mb-[60px] md:mb-[80px] lg:mb-[100px] ${
-				type === 'reverse' && 'flex-row-reverse'
+				type === 'reverse' ? 'flex-col-reverse md:flex-row-reverse' : 'flex-col-reverse md:flex-row'
 			}`}>
 			<div className={`w-full md:w-[45%] pl-10 pr-4 mb-7 md:mb-0`}>
-				<h3 className='text-left font-juliusSansOne text-base md:text-xl lg:text-2xl xl:text-3xl'>{title}</h3>
-				<Parrafo className='font-medium mb-0'>{parse(description)}</Parrafo>
-				<Parrafo className='mb-[15px]'>{parse(sizeRoom)}</Parrafo>
+				<h3 className='font-juliusSansOne text-base md:text-xl lg:text-2xl xl:text-3xl text-center md:text-left'>
+					{title}
+				</h3>
+				<Parrafo className='font-medium mb-0 text-center md:text-left'>{parse(description)}</Parrafo>
+				<Parrafo className='mb-[15px] text-center md:text-left'>{parse(sizeRoom)}</Parrafo>
 
-				<ul className='sm:columns-2 list-disc pl-[15px] mb-[20px]'>
+				<ul className='columns-2 w-full max-w-[400px] md:max-w-none mx-auto list-disc md:pl-[15px] mb-[30px]'>
 					{amenidades.map(k => (
 						<li key={'room-amenidad' + generarId(7)}>{k}</li>
 					))}
 				</ul>
 
-				<Botton.Reservar />
+				<div className='text-center md:text-left'>
+					<Botton.Reservar />
+				</div>
 			</div>
-			<div className={`w-full md:w-[50%] relative z-[1]`}>
+			<div className={`w-full mb-[40px] md:mb-0 md:w-[50%] relative z-[1]`}>
 				{type === 'reverse' ? (
 					<div
 						className='hidden md:block h-[80px] w-[450px] bg-no-repeat bg-contain bg-right absolute top-1/2 left-[-460px] z-10'

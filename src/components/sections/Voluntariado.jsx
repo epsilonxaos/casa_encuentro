@@ -11,6 +11,7 @@ import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { toast } from 'sonner'
+import { BsPlayCircle } from 'react-icons/bs'
 
 export default function Voluntariado() {
 	const { t } = useTranslation()
@@ -49,7 +50,11 @@ export default function Voluntariado() {
 				className='px-[50px] md:px-[80px] lg:px-[120px] py-[90px]  xl:pt-[180px] overflow-hidden relative max-w-[1320px]'
 				id={'voluntariado'}>
 				<div className='flex flex-wrap items-center'>
-					<div className='w-full md:w-2/5 mb-[30px] md:mb-0'>
+					<div className='w-full md:w-2/5 mb-[30px] md:mb-0 relative'>
+						<BsPlayCircle
+							size={45}
+							className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10'
+						/>
 						<img
 							src={celular}
 							alt='Celular'
@@ -130,7 +135,7 @@ export default function Voluntariado() {
 							<small className='text-xs col-span-2'>
 								<span className='text-red-500'>*</span> Los campos marcados son obligatorios
 							</small>
-							<div className='flex items-center justify-center col-span-2'>
+							<div className='flex items-center justify-center col-span-2 mb-3'>
 								<ReCAPTCHA
 									ref={captchaRef}
 									badge='inline'
