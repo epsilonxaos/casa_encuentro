@@ -12,11 +12,14 @@ import { useRef } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { toast } from 'sonner'
 import { BsPlayCircle } from 'react-icons/bs'
+import FsLightbox from 'fslightbox-react'
+import { useState } from 'react'
 
 export default function Voluntariado() {
 	const { t } = useTranslation()
 	const form = useRef()
 	const captchaRef = useRef(null)
+	const [toggler, setToggler] = useState(false) //? Videos
 
 	const sendEmail = async e => {
 		e.preventDefault()
@@ -28,7 +31,7 @@ export default function Voluntariado() {
 		if (token) {
 			const send = emailjs.sendForm('service_67wnguf', 'template_pyiv2pt', form.current, 'cDwg-CB5weplwfNll').then(
 				result => {
-					toast.success('Mensaje enviado')
+					form.target.reset()
 				},
 				error => {
 					console.log(error.text)
@@ -46,6 +49,10 @@ export default function Voluntariado() {
 	//CasaEncuentro.98
 	return (
 		<>
+			<FsLightbox
+				toggler={toggler}
+				sources={['https://www.youtube.com/watch?v=Jf3JjcnQMZw']}
+			/>
 			<Container
 				className='px-[50px] md:px-[80px] lg:px-[120px] py-[90px]  xl:pt-[180px] overflow-hidden relative max-w-[1320px]'
 				id={'voluntariado'}>
@@ -53,7 +60,11 @@ export default function Voluntariado() {
 					<div className='w-full md:w-2/5 mb-[30px] md:mb-0 relative'>
 						<BsPlayCircle
 							size={45}
-							className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10'
+							onClick={() => {
+								console.log('click')
+								setToggler(!toggler)
+							}}
+							className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer'
 						/>
 						<img
 							src={celular}
@@ -64,9 +75,9 @@ export default function Voluntariado() {
 					<div className='w-full md:w-3/5'>
 						<Titulo.H2 className='mb-[20px]'>{t('home.voluntariado.titulo')}</Titulo.H2>
 						<hr className='border-crema w-[60%] max-w-[215px] mx-auto mb-[20px]' />
-						<Parrafo className='font-semibold'>{t('home.voluntariado.parrafo_1')}</Parrafo>
-						<Parrafo>{t('home.voluntariado.parrafo_2')}</Parrafo>
-						<Parrafo>{t('home.voluntariado.parrafo_3')}</Parrafo>
+						<Parrafo className='text-center md:text-left font-semibold'>{t('home.voluntariado.parrafo_1')}</Parrafo>
+						<Parrafo className='text-center md:text-left '>{t('home.voluntariado.parrafo_2')}</Parrafo>
+						<Parrafo className='text-center md:text-left '>{t('home.voluntariado.parrafo_3')}</Parrafo>
 						<Titulo.H3>{t('home.voluntariado.titulo_formulario')}</Titulo.H3>
 
 						<form
