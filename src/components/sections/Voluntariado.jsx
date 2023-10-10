@@ -5,12 +5,44 @@ import Parrafo from '../helpers/Parrafo'
 import Titulo from '../helpers/Titulo'
 
 import celular from '../../img/voluntariado/celular.png'
-import { twMerge } from 'tailwind-merge'
 import { Input } from '../forms/Input'
 import { useTranslation } from 'react-i18next'
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { toast } from 'sonner'
 
 export default function Voluntariado() {
 	const { t } = useTranslation()
+	const form = useRef()
+	const captchaRef = useRef(null)
+
+	const sendEmail = async e => {
+		e.preventDefault()
+		const token = captchaRef.current.getValue()
+		captchaRef.current.reset()
+		console.log('%c >>> token ', 'background: #03071e; color: #ffba08; font-weight: bold')
+		console.log(token)
+
+		if (token) {
+			const send = emailjs.sendForm('service_67wnguf', 'template_pyiv2pt', form.current, 'cDwg-CB5weplwfNll').then(
+				result => {
+					toast.success('Mensaje enviado')
+				},
+				error => {
+					console.log(error.text)
+				}
+			)
+			toast.promise(send, {
+				loading: 'Enviando...',
+				success: 'Mensaje enviado',
+				error: 'Ups! Intente más tarde',
+			})
+		}
+	}
+
+	//contacto@casaencuentro.mx
+	//CasaEncuentro.98
 	return (
 		<>
 			<Container
@@ -33,31 +65,52 @@ export default function Voluntariado() {
 						<Titulo.H3>{t('home.voluntariado.titulo_formulario')}</Titulo.H3>
 
 						<form
-							action=''
+							ref={form}
+							onSubmit={sendEmail}
 							className='sm:grid sm:grid-cols-2 gap-4'>
 							<Input
-								label={t('nombre')}
+								label={
+									<span>
+										<span className='text-red-500'>*</span> {t('nombre')}
+									</span>
+								}
 								name='nombre'
 								className=''
 							/>
 							<Input
-								label={t('apellido')}
+								label={
+									<span>
+										<span className='text-red-500'>*</span> {t('apellido')}
+									</span>
+								}
 								name='apellidos'
 								className=''
 							/>
 							<Input
 								type='email'
-								label={t('correo')}
+								label={
+									<span>
+										<span className='text-red-500'>*</span> {t('correo')}
+									</span>
+								}
 								name='email'
 								className=''
 							/>
 							<Input
-								label={t('edad')}
+								label={
+									<span>
+										<span className='text-red-500'>*</span> {t('edad')}
+									</span>
+								}
 								name='edad'
 								className=''
 							/>
 							<Input
-								label={t('ciudad')}
+								label={
+									<span>
+										<span className='text-red-500'>*</span> {t('ciudad')}
+									</span>
+								}
 								name='ciudad'
 								className='col-span-2'
 							/>
@@ -70,11 +123,24 @@ export default function Voluntariado() {
 								</label>
 								<textarea
 									id='mensaje'
+									name='mensaje'
 									rows='4'
 									className='block py-2.5 w-full text-sm text-white bg-transparent border border-dorado appearance-none !focus:outline-none focus:ring-0 focus:border-dorado peer px-3'></textarea>
 							</div>
+							<small className='text-xs col-span-2'>
+								<span className='text-red-500'>*</span> Los campos marcados son obligatorios
+							</small>
+							<div className='flex items-center justify-center col-span-2'>
+								<ReCAPTCHA
+									ref={captchaRef}
+									badge='inline'
+									sitekey={'algo'}
+								/>
+							</div>
 							<div className='col-span-2 text-center'>
-								<button className='bg-naranja py-2 px-7 text-white font-medium text-sm'>
+								<button
+									type='submit'
+									className='bg-naranja py-2 px-7 text-white font-medium text-sm'>
 									{t('home.voluntariado.boton_enviar')}
 								</button>
 							</div>

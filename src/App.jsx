@@ -14,6 +14,7 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop'
 import { AnimatePresence } from 'framer-motion'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Transition from './components/animations/Transitions'
+import { Toaster } from 'sonner'
 
 function App() {
 	const [into, setInto] = useState(true)
@@ -23,6 +24,10 @@ function App() {
 
 	return (
 		<>
+			<Toaster
+				richColors
+				position='top-center'
+			/>
 			<AnimatePresence mode='wait'>
 				<ScrollToTop />
 				<Header />

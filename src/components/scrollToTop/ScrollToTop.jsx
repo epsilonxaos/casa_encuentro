@@ -5,10 +5,8 @@ const ScrollToTop = () => {
 	const location = useLocation()
 
 	useEffect(() => {
-		console.log(location.hash)
 		const element = location.hash ? document.getElementById(location.hash.replace('#', '')) : null
 
-		console.log(element)
 		setTimeout(() => {
 			window.scrollTo({
 				behavior: element ? 'smooth' : 'auto',
