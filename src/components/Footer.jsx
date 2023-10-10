@@ -27,7 +27,7 @@ export default function Footer() {
 					</p>
 					<p>
 						<a
-							href='http://'
+							href='https://www.facebook.com/profile.php?id=100089245131698'
 							target='_blank'
 							rel='noopener noreferrer'
 							className='mr-2'>
@@ -37,7 +37,7 @@ export default function Footer() {
 							/>
 						</a>
 						<a
-							href='http://'
+							href='https://www.instagram.com/casaencuentro_mx/'
 							target='_blank'
 							rel='noopener noreferrer'>
 							<FiInstagram
