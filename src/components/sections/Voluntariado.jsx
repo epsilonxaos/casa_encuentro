@@ -29,22 +29,21 @@ export default function Voluntariado() {
 		console.log(token)
 
 		if (token) {
-			const send = emailjs.sendForm('service_67wnguf', 'template_pyiv2pt', form.current, 'cDwg-CB5weplwfNll').then(
+			toast.loading('Enviando...')
+			emailjs.sendForm('service_67wnguf', 'template_pyiv2pt', form.current, 'cDwg-CB5weplwfNll').then(
 				result => {
 					form.target.reset()
+					toast.success('Mensaje enviando')
 				},
 				error => {
+					toast.error('Ups! Intente más tarde')
 					console.log(error.text)
 				}
 			)
-			toast.promise(send, {
-				loading: 'Enviando...',
-				success: 'Mensaje enviado',
-				error: 'Ups! Intente más tarde',
-			})
 		}
 	}
 
+	//Cuenta para correos -> https://dashboard.emailjs.com/admin
 	//contacto@casaencuentro.mx
 	//CasaEncuentro.98
 	return (
@@ -150,7 +149,7 @@ export default function Voluntariado() {
 								<ReCAPTCHA
 									ref={captchaRef}
 									badge='inline'
-									sitekey={'algo'}
+									sitekey={'6LdPFY0oAAAAAMymuZZh6M82kwIOS4XoCx4tG394'}
 								/>
 							</div>
 							<div className='col-span-2 text-center'>
