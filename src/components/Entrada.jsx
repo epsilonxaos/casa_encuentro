@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Sello, SelloStroke } from './helpers/Icons'
 import { useState } from 'react'
+import Titulo from './helpers/Titulo'
 
 export default function Entrada({ onClick }) {
 	const [isHover, setIsHover] = useState(false)
@@ -73,10 +74,10 @@ export default function Entrada({ onClick }) {
 	}
 	return (
 		<AnimatePresence mode='wait'>
-			<div className='bg-black h-screen w-full flex items-center justify-center absolute top-0 left-0'>
+			<div className='bg-black h-screen w-full flex items-center justify-center flex-col absolute top-0 left-0'>
 				<motion.div
-					onHoverStart={e => setIsHover(!isHover)}
-					onHoverEnd={e => setIsHover(!isHover)}
+					onHoverStart={e => setIsHover(true)}
+					onHoverEnd={e => setIsHover(false)}
 					initial={{ padding: '8px' }}
 					animate={isHover ? { padding: '30px' } : { padding: '8px' }}
 					className='p-2 relative z-10 cursor-pointer'
@@ -92,6 +93,22 @@ export default function Entrada({ onClick }) {
 						variants={variants.dibujado}
 						className='w-[250px] h-[250px]'
 					/>
+				</motion.div>
+				<motion.div
+					{...(onClick && { onClick })}
+					className='pt-5 cursor-pointer'
+					onHoverStart={e => setIsHover(true)}
+					onHoverEnd={e => setIsHover(false)}
+					initial={{
+						opacity: 0,
+					}}
+					animate={{
+						opacity: 1,
+						transition: {
+							delay: 6,
+						},
+					}}>
+					<Titulo>Entrar</Titulo>
 				</motion.div>
 			</div>
 		</AnimatePresence>
