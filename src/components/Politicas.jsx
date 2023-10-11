@@ -24,7 +24,7 @@ export const Politicas = () => {
 				Esta Política se aplica a todos los sitios de Internet y aplicaciones móviles administrados por{' '}
 				<span className='font-semibold'>CASA ENCUENTRO</span> o en su nombre, e incluye las compañías de{' '}
 				<span className='font-semibold'>CASA ENCUENTRO</span> de todo el mundo (conocidas como “sitio de internet o
-				aplicación móvil de CASA ENCUENTRO”).
+				aplicación móvil de <span className='font-semibold'>CASA ENCUENTRO</span>”).
 			</Parrafo>
 			<Parrafo>
 				También se aplica a toda la información personal que <span className='font-semibold'>CASA ENCUENTRO</span> pueda
