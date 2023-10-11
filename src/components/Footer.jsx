@@ -49,12 +49,12 @@ export default function Footer() {
 						</a>
 					</p>
 					<p>
-						<a href='mailto:casaencuentrog@gmail.com'>
+						<a href='mailto:contacto@casaencuentro.mx'>
 							<FiMail
 								className='inline mr-1'
 								size={16}
 							/>
-							casaencuentrog@gmail.com
+							contacto@casaencuentro.mx
 						</a>
 					</p>
 				</div>
