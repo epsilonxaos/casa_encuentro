@@ -9,8 +9,8 @@
 	{
 		"img": "img/amenidades/02.svg",
 		"title": {
-			"en": "Free WIFI",
-			"es": "Wifi Gratis"
+			"en": "Wifi",
+			"es": "Wifi"
 		}
 	},
 	{
@@ -80,7 +80,7 @@
 		"img": "img/amenidades/13.svg",
 		"title": {
 			"en": "Outdoor terrace",
-			"es": "Terraza al aire libre"
+			"es": "Balcones"
 		}
 	},
 	{
@@ -88,13 +88,6 @@
 		"title": {
 			"en": "Strongbox",
 			"es": "Cajón de articulos personales"
-		}
-	},
-	{
-		"img": "img/amenidades/14.svg",
-		"title": {
-			"en": "Security cameras outside and common areas",
-			"es": "Cámaras de seguridad en exterior y áreas comunes"
 		}
 	}
 ]
