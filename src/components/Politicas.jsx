@@ -32,17 +32,17 @@ export const Politicas = () => {
 			</Parrafo>
 			<ul className='pl-4'>
 				<li>
-					<Parrafo>1. A través de nuestros productos y servicios.</Parrafo>
+					<Parrafo className='mb-0'>1. A través de nuestros productos y servicios.</Parrafo>
 				</li>
 				<li>
-					<Parrafo>
+					<Parrafo className='mb-0'>
 						2. Cuando interactúa con nosotros por medios distintos de un sitio de internet o aplicación móvil de{' '}
 						<span className='font-semibold'>CASA ENCUENTRO</span>, por ejemplo, de manera presencial, por teléfono o en
 						una feria de muestras o formación.
 					</Parrafo>
 				</li>
 				<li>
-					<Parrafo>
+					<Parrafo className='mb-0'>
 						3. A través de nuestros clientes, distribuidores, proveedores, vendedores y otros socios comerciales (en
 						conjunto, “socios comerciales”).
 					</Parrafo>
