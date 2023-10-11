@@ -2,6 +2,7 @@ import Container from './container/Container'
 import { TfiLocationPin } from 'react-icons/tfi'
 import { FiPhone, FiFacebook, FiInstagram, FiMail } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
 	const { t } = useTranslation()
@@ -61,12 +62,7 @@ export default function Footer() {
 
 			<div className='bg-black text-sm md:text-base text-center py-[15px]'>
 				<p>
-					<a
-						href='http://'
-						target='_blank'
-						rel='noopener noreferrer'>
-						{t('footer.politicas')}
-					</a>
+					<Link to={'/politicas'}>{t('footer.politicas')}</Link>
 				</p>
 			</div>
 		</footer>

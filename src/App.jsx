@@ -15,6 +15,7 @@ import { AnimatePresence } from 'framer-motion'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Transition from './components/animations/Transitions'
 import { Toaster } from 'sonner'
+import { Politicas } from './components/Politicas'
 
 function App() {
 	const [into, setInto] = useState(false)
@@ -28,9 +29,9 @@ function App() {
 				richColors
 				position='top-center'
 			/>
+			<Header />
+			<ScrollToTop />
 			<AnimatePresence mode='wait'>
-				<ScrollToTop />
-				<Header />
 				<Routes
 					location={location}
 					key={location.pathname}>
@@ -47,6 +48,16 @@ function App() {
 									<Reviews />
 									<Ubicacion />
 									<Voluntariado />
+								</main>
+							</Transition>
+						}
+					/>
+					<Route
+						path='/politicas'
+						element={
+							<Transition>
+								<main>
+									<Politicas />
 								</main>
 							</Transition>
 						}

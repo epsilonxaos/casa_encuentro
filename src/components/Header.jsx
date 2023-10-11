@@ -11,8 +11,8 @@ import { DateTime } from 'luxon'
 import { FaTimes } from 'react-icons/fa'
 import { BsCalendarWeek } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
-import { AnimatePresence, motion, scroll } from 'framer-motion'
+import { Link, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const v1 = {
 	hide: {
@@ -60,7 +60,7 @@ const imgV = {
 		translateX: '-50%',
 	},
 }
-export default function Header({ scrollYProgress }) {
+export default function Header() {
 	const [open, setOpen] = useState(false)
 	const [scrollPosition, setScrollPosition] = useState(0)
 	const handleScroll = () => {
@@ -75,7 +75,6 @@ export default function Header({ scrollYProgress }) {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [])
-
 	return (
 		<>
 			<header className='fixed top-0 left-0 w-full z-50 text-xs md:text-base'>
@@ -84,16 +83,18 @@ export default function Header({ scrollYProgress }) {
 					<Container className='hidden md:block'>
 						<AnimatePresence mode='wait'>
 							<nav className='flex items-center justify-between py-[25px]'>
-								<motion.img
-									src={logo}
+								<motion.span
 									initial={imgV.normal}
-									animate={scrollPosition <= 250 ? imgV.normal : imgV.center}
-									alt='Casa encuentro'
 									className='w-[180px] relative cursor-pointer'
-									onClick={() => {
-										window.scrollTo({ top: 0, left: 0, behavior: 'smooth', transition: { duration: 0.4 } })
-									}}
-								/>
+									animate={scrollPosition <= 250 ? imgV.normal : imgV.center}>
+									<Link to={'/'}>
+										<motion.img
+											src={logo}
+											alt='Casa encuentro'
+											className='w-[180px] relative cursor-pointer'
+										/>
+									</Link>
+								</motion.span>
 								<div className='flex relative pr-[calc(30px+52px)] min-h-[24px]'>
 									<AnimatePresence mode='wait'>
 										{scrollPosition <= 250 && (
@@ -223,21 +224,30 @@ const FormReservaciones = () => {
 	const v = {
 		open: {
 			height: 'auto',
+			when: 'afterChildren',
+		},
+		show: {
+			overflow: 'initial',
+			transition: {
+				when: 'beforeChildren',
+				delay: 0.3,
+			},
 		},
 		close: {
 			height: '0px',
+			overflow: 'hidden',
 		},
 	}
 
 	return (
-		<AnimatePresence mode='wait'>
-			<motion.div className='absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-[calc(100%+80px) z-[1] w-full sm:max-w-[400px]'>
+		<AnimatePresence>
+			<div className='absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-[calc(100%+80px) z-[1] w-full sm:max-w-[400px]'>
 				<motion.div
 					initial={v.close}
-					animate={open ? v.open : v.close}
-					exit={open ? v.open : v.close}
+					animate={open ? [v.open, v.show] : v.close}
+					exit={open ? [v.open, v.show] : v.close}
 					transition={{ duration: 0.3 }}
-					className='relative px-2 bg-black rounded-b z-[1] overflow-hidden'>
+					className='relative px-2 bg-black rounded-b z-[1]'>
 					<form
 						action='https://rbe.zaviaerp.com/'
 						method='get'>
@@ -299,7 +309,7 @@ const FormReservaciones = () => {
 						</>
 					)}
 				</button>
-			</motion.div>
+			</div>
 		</AnimatePresence>
 	)
 }
