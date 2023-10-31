@@ -1,9 +1,10 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, usePresence } from 'framer-motion'
 import { Sello, SelloStroke } from './helpers/Icons'
 import { useState } from 'react'
 import Titulo from './helpers/Titulo'
+import { useEffect } from 'react'
 
-export default function Entrada({ onClick }) {
+export default function Entrada({ changeIntro }) {
 	const [isHover, setIsHover] = useState(false)
 	const variants = {
 		circulo: {
@@ -24,7 +25,7 @@ export default function Entrada({ onClick }) {
 				transition: {
 					when: 'beforeChildren',
 					duration: 1,
-					delay: 4,
+					delay: 3,
 				},
 			},
 			isHover: {
@@ -52,7 +53,7 @@ export default function Entrada({ onClick }) {
 				transition: {
 					when: 'beforeChildren',
 					delay: 1.5,
-					duration: 3,
+					duration: 2,
 				},
 			},
 			second: {
@@ -60,7 +61,7 @@ export default function Entrada({ onClick }) {
 				stroke: '#00000000',
 				transition: {
 					when: 'beforeChildren',
-					delay: 3.5,
+					delay: 3,
 					duration: 2,
 				},
 			},
@@ -72,6 +73,9 @@ export default function Entrada({ onClick }) {
 			},
 		},
 	}
+
+	useEffect(() => setTimeout(() => changeIntro(), 5000), [])
+
 	return (
 		<AnimatePresence mode='wait'>
 			<div className='bg-black h-screen w-full flex items-center justify-center flex-col absolute top-0 left-0'>
@@ -80,8 +84,7 @@ export default function Entrada({ onClick }) {
 					onHoverEnd={e => setIsHover(false)}
 					initial={{ padding: '8px' }}
 					animate={isHover ? { padding: '30px' } : { padding: '8px' }}
-					className='p-2 relative z-10 cursor-pointer'
-					{...(onClick && { onClick })}>
+					className='p-2 relative z-10 cursor-pointer'>
 					<motion.div
 						variants={variants.circulo}
 						initial={'hidden'}
@@ -93,22 +96,6 @@ export default function Entrada({ onClick }) {
 						variants={variants.dibujado}
 						className='w-[250px] h-[250px]'
 					/>
-				</motion.div>
-				<motion.div
-					{...(onClick && { onClick })}
-					className='pt-5 cursor-pointer'
-					onHoverStart={e => setIsHover(true)}
-					onHoverEnd={e => setIsHover(false)}
-					initial={{
-						opacity: 0,
-					}}
-					animate={{
-						opacity: 1,
-						transition: {
-							delay: 6,
-						},
-					}}>
-					<Titulo>Entrar</Titulo>
 				</motion.div>
 			</div>
 		</AnimatePresence>

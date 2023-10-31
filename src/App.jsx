@@ -21,7 +21,7 @@ function App() {
 	const [into, setInto] = useState(false)
 	const location = useLocation()
 
-	if (!into) return <Entrada onClick={() => setInto(true)} />
+	if (!into) return <Entrada changeIntro={() => setInto(true)} />
 
 	return (
 		<>
