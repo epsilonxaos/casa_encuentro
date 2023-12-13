@@ -25,7 +25,7 @@ export default function Entrada({ changeIntro }) {
 				transition: {
 					when: 'beforeChildren',
 					duration: 1,
-					delay: 3,
+					delay: 2.5,
 				},
 			},
 			isHover: {
@@ -38,7 +38,7 @@ export default function Entrada({ changeIntro }) {
 			exit: {
 				opacity: 0,
 				transition: {
-					duration: 1.5,
+					duration: 1,
 				},
 			},
 		},
@@ -53,7 +53,7 @@ export default function Entrada({ changeIntro }) {
 				transition: {
 					when: 'beforeChildren',
 					delay: 1.5,
-					duration: 2,
+					duration: 1.5,
 				},
 			},
 			second: {
@@ -61,8 +61,8 @@ export default function Entrada({ changeIntro }) {
 				stroke: '#00000000',
 				transition: {
 					when: 'beforeChildren',
-					delay: 3,
-					duration: 2,
+					delay: 2,
+					duration: 1.5,
 				},
 			},
 			exit: {
@@ -74,11 +74,13 @@ export default function Entrada({ changeIntro }) {
 		},
 	}
 
-	useEffect(() => setTimeout(() => changeIntro(), 5000), [])
+	useEffect(() => {
+		setTimeout(() => changeIntro(), 3700)
+	}, [])
 
 	return (
 		<AnimatePresence mode='wait'>
-			<div className='bg-black h-screen w-full flex items-center justify-center flex-col absolute top-0 left-0'>
+			<div className='bg-black h-screen w-full flex items-center justify-center flex-col absolute z-10 top-0 left-0'>
 				<motion.div
 					onHoverStart={e => setIsHover(true)}
 					onHoverEnd={e => setIsHover(false)}

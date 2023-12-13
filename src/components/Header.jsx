@@ -67,6 +67,7 @@ export default function Header() {
 		const position = window.pageYOffset
 		setScrollPosition(position)
 	}
+	const { pathname } = useLocation()
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll, { passive: true })
@@ -156,7 +157,7 @@ export default function Header() {
 				</AnimatePresence>
 			</header>
 
-			<FormReservaciones />
+			{/* {pathname != '/reservacion' && <FormReservaciones />} */}
 
 			{open && (
 				<div className='bg-black md:hidden bg-opacity-10 z-20 fixed top-0 left-0 w-full h-full backdrop-blur-sm'></div>

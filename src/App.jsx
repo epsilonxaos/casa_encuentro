@@ -16,6 +16,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Transition from './components/animations/Transitions'
 import { Toaster } from 'sonner'
 import { Politicas } from './components/Politicas'
+import Reservacion from './pages/Reservacion'
 
 function App() {
 	const [into, setInto] = useState(false)
@@ -58,6 +59,16 @@ function App() {
 							<Transition>
 								<main>
 									<Politicas />
+								</main>
+							</Transition>
+						}
+					/>
+					<Route
+						path='/reservacion'
+						element={
+							<Transition>
+								<main>
+									<Reservacion />
 								</main>
 							</Transition>
 						}

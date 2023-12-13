@@ -8,6 +8,7 @@ import './lang/i18n'
 import './fonts/fonts.css'
 import './css/tailwind.css'
 import './css/index.css'
+import './css/reservationPlugin.css'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 ReactDOM.createRoot(document.getElementById('root')).render(

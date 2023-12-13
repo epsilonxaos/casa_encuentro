@@ -1,6 +1,7 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import banner from '../../img/banner.jpg'
 import sello from '../../img/sello.png'
+import { useEffect } from 'react'
 
 export default function Banner() {
 	return (

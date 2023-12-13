@@ -16,7 +16,7 @@ const Reservar = ({ children, className = '' }) => {
 	return (
 		<a
 			className={twMerge('bg-naranja py-2 px-7 text-white font-medium text-sm', className)}
-			href='https://rbe.zaviaerp.com/?hotel=casaencuentro'
+			href='https://hotels.cloudbeds.com/reservation/qZCAVP'
 			target='_blank'
 			rel='noopener noreferrer'>
 			{children ?? t('reservar')}
