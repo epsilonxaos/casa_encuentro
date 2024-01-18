@@ -18,12 +18,12 @@ export default function Footer() {
 						<span>Calle 27 #218, entre 26 y 28, García Ginerés.</span>
 					</p>
 					<p>
-						<a href='tel:+5512273282'>
+						<a href='tel:+529997811320'>
 							<FiPhone
 								className='inline mr-1'
 								size={16}
 							/>
-							<span>(55)1 227 3282</span>
+							<span>(99)9 781 1320</span>
 						</a>
 					</p>
 					<p>
